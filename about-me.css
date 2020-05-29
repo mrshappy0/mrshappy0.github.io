@@ -141,9 +141,9 @@ body {
 }
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
-    .floatingletters{
-        display:none;
-    }
+  .floatingletters {
+    display: none;
+  }
   .background-img {
     background-image: url(Adam-Monogram.png);
     background-position: right;
@@ -152,26 +152,38 @@ body {
     background-size: contain;
     position: relative;
     width: 100%;
+    opacity: 0.1;
   }
+
   .slidein {
-    animation-duration: 5s;
-    animation-name: slidein;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    animation: slidein 5s ease-in-out 1 forwards,
+      pulse 2.1s linear infinite alternate 5s;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0.8;
+    }
   }
 
   @keyframes slidein {
     0% {
       transform: translateX(105%);
+      opacity: 0.0;
     }
     50% {
       transform: translateX(-50%);
+      opacity: 0.3;
     }
     100% {
       transform: translateX(-10%);
+      opacity: 0.6;
     }
   }
+
   p {
     font-size: 0px;
     display: inline-block;
@@ -192,12 +204,14 @@ body {
       transform: rotateY(0deg);
       transform: rotateZ(0deg);
       font-size: 0px;
+      opacity: 0.0;
     }
     100% {
       transform: rotateX(360deg);
       transform: rotateY(360deg);
       transform: rotateZ(360deg);
       font-size: 40px;
+      opacity: 0.4;
     }
   }
 }
@@ -213,17 +227,24 @@ body {
   .background-img {
     background-image: url(Adam-Monogram.png);
     background-position: right;
-    height: 55vh;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     width: 100%;
   }
   .slidein {
-    animation-duration: 1.5s;
-    animation-name: slidein;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
+    animation: slidein 2.5s ease-in-out 1 forwards,
+      pulse 2.25s linear infinite alternate 2.5s;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.4;
+    }
   }
 
   @keyframes slidein {
@@ -232,7 +253,7 @@ body {
     }
 
     100% {
-      transform: translateX(0px);
+      position: center;
     }
   }
   p {
@@ -258,7 +279,7 @@ body {
     100% {
       transform: rotateX(360deg);
       font-size: 50px;
-      opacity: 1;
+      opacity: 0.4;
     }
   }
 }
