@@ -127,27 +127,29 @@ table {
 }
 
 /****^^^^^*********************Myers Reset***********^^^^***************/
-
-#hobbies {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 body {
   font-family: "Nunito Sans", sans-serif;
-  font-weight: normal;
-  /* background-color: rgb(247, 203, 253); */
-  /* background-image: linear-gradient(to bottom right,rgb(247, 203, 253), white); */
-  background-repeat: no-repeat;
-  background-size: 200%;
-  /* background-color: rgb(234, 235, 166); */
-  color: rgb(252, 252, 252);
+  font-weight: 100;
+  color: rgb(0, 0, 0);
 }
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
-  .floatingletters {
-    display: none;
+  .floatingletters{
+    display:none;
   }
+  .absoluteletters {
+    position: absolute;
+    top: 10%; left: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    color: black;
+  }
+  .absoluteletters div {
+    align-self: flex-end;
+  }
+
   .background-img {
     background-image: url(Adam-Monogram.png);
     background-position: right;
@@ -183,7 +185,7 @@ body {
       opacity: 0.3;
     }
     100% {
-      transform: translateX(-10%);
+      transform: translateX(0%);
       opacity: 0.6;
     }
   }
@@ -222,6 +224,9 @@ body {
 
 /*  Different animation for small screens */
 @media (max-width: 646px) {
+  .absoluteletters{
+    display:none;
+  }
   .floatingletters {
     display: flex;
     justify-content: space-around;
@@ -231,7 +236,7 @@ body {
   .background-img {
     background-image: url(Adam-Monogram.png);
     background-position: right;
-    height: 50vh;
+    height: 30vh;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -282,7 +287,7 @@ body {
     }
     100% {
       transform: rotateX(360deg);
-      font-size: 50px;
+      font-size: 40px;
       opacity: 0.4;
     }
   }
