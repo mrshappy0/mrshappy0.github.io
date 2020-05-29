@@ -1,5 +1,264 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+<p
+  class="sidebar"
+  > <span
+  class="font-effect-anaglyph"
+  > Contact</span
+  > </p
+  > th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****^^^^^*********************Myers Reset***********^^^^***************/
+
 #hobbies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: normal;
+  background-color: rgb(245, 244, 242);
+  color: rgb(252, 252, 252);
+}
+/* stop spinning animation for small screens */
+@media (min-width: 646px) {
+    .floatingletters{
+        display:none;
+    }
+  .background-img {
+    background-image: url(Adam-Monogram.png);
+    background-position: right;
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+  }
+  .slidein {
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(105%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+  p {
+    font-size: 0px;
+    display: inline-block;
+    margin: 1.5rem;
+  }
+  .slideMenu {
+    animation-duration: 2.5s;
+    animation-name: slideMenu;
+    animation-iteration-count: 1;
+    animation-delay: 2.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideMenu {
+    0% {
+      transform: rotateX(0deg);
+      transform: rotateY(0deg);
+      transform: rotateZ(0deg);
+      font-size: 0px;
+    }
+    100% {
+      transform: rotateX(360deg);
+      transform: rotateY(360deg);
+      transform: rotateZ(360deg);
+      font-size: 40px;
+    }
+  }
+}
+
+/*  Different animation for small screens */
+@media (max-width: 646px) {
+  .floatingletters {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+    font-size: 20px;
+    color: black;
+  }
+  .background-img {
+    background-image: url(Adam-Monogram.png);
+    background-position: right;
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+  }
+  .slidein {
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(150%);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  p {
+    font-size: 0px;
+    display: block;
+    margin: 1.5rem;
+  }
+  .slideMenu {
+    animation-duration: 0.75s;
+    animation-name: slideMenu;
+    animation-iteration-count: 1;
+    animation-delay: 0.75s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideMenu {
+    0% {
+      transform: rotateX(0deg);
+      font-size: 0px;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(360deg);
+      font-size: 50px;
+      opacity: 1;
+    }
+  }
 }
