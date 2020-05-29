@@ -1,16 +1,21 @@
 let monogram = document.getElementsByClassName("background-img"),
-  slideMenu = document.getElementsByClassName("sidebar");
-monogram[0].addEventListener("animationstart", slideListener, false);
-monogram[0].addEventListener("animationend", slideListener, false);
+    slideMenu = document.getElementsByClassName("sidebar");
+    adamShappyLetters = document.getElementsByClassName("absoluteletters")[0].children
+    console.log(adamShappyLetters)
+monogram[0].addEventListener("animationstart", animationListener, false);
+monogram[0].addEventListener("animationend", animationListener, false);
 monogram[0].classList.add("slidein");
 
-function slideListener(event) {
+function animationListener(event) {
   if (event.type === "animationstart") {
-    console.log(slideMenu);
     Object.keys(slideMenu).forEach((el) => {
-      console.log(slideMenu[el]);
       slideMenu[el].classList.add("slideMenu");
-      console.log(slideMenu[el].classList);
     });
+  if (event.type === "animationend"){
+    Object.keys(adamShappyLetters).forEach((el) => {
+      adamShappyLetters[el].classList.add("vibrate");
+      console.log(adamShappyLetters[el].classList)
+    });
+  }
   }
 }

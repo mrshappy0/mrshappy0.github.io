@@ -130,8 +130,15 @@ table {
 body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 100;
-  color: rgb(0, 0, 0);
+  color: rgb(139, 138, 138);
+  min-height: 100%;
+  background-color: white;
 }
+
+html {
+  height: 100%
+}
+
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
   .floatingletters{
@@ -147,7 +154,18 @@ body {
     color: black;
   }
   .absoluteletters div {
-    align-self: flex-end;
+    opacity: 0;
+    align-self: baseline;
+    animation: fadeIn 2s linear 1 forwards 0.3s;
+  }
+
+  @keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
   }
 
   .background-img {
