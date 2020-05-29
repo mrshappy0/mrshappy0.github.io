@@ -136,7 +136,11 @@ table {
 body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: normal;
-  background-color: rgb(245, 244, 242);
+  /* background-color: rgb(247, 203, 253); */
+  /* background-image: linear-gradient(to bottom right,rgb(247, 203, 253), white); */
+  background-repeat: no-repeat;
+  background-size: 200%;
+  /* background-color: rgb(234, 235, 166); */
   color: rgb(252, 252, 252);
 }
 /* stop spinning animation for small screens */
