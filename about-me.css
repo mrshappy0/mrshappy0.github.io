@@ -248,7 +248,7 @@ html {
     }
 
     100% {
-      position: center;
+      transform: translateX(0%);
     }
   }
   p {
