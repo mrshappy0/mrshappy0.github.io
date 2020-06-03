@@ -1,129 +1,96 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-<p
-  class="sidebar"
-  > <span
-  class="font-effect-anaglyph"
-  > Contact</span
-  > </p
-  > th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
+
 body {
-  line-height: 1;
+    line-height:1;
 }
-ol,
-ul {
-  list-style: none;
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
 }
-blockquote,
-q {
-  quotes: none;
+
+nav ul {
+    list-style:none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+
+blockquote, q {
+    quotes:none;
 }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
 }
 
 /****^^^^^*********************Myers Reset***********^^^^***************/
@@ -136,17 +103,18 @@ body {
 }
 
 html {
-  height: 100%
+  height: 100%;
 }
 
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
-  .floatingletters{
-    display:none;
+  .floatingletters {
+    display: none;
   }
   .absoluteletters {
     position: absolute;
-    top: 10%; left: 1%;
+    top: 10%;
+    left: 1%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -159,12 +127,12 @@ html {
     animation: fadeIn 2s linear 1 forwards 0.3s;
   }
 
-  @keyframes fadeIn{
+  @keyframes fadeIn {
     0% {
-      opacity:0;
+      opacity: 0;
     }
     100% {
-      opacity:1;
+      opacity: 1;
     }
   }
 
@@ -196,7 +164,7 @@ html {
   @keyframes slidein {
     0% {
       transform: translateX(105%);
-      opacity: 0.0;
+      opacity: 0;
     }
     50% {
       transform: translateX(-50%);
@@ -228,7 +196,7 @@ html {
       transform: rotateY(0deg);
       transform: rotateZ(0deg);
       font-size: 0px;
-      opacity: 0.0;
+      opacity: 0;
     }
     100% {
       transform: rotateX(360deg);
@@ -242,8 +210,8 @@ html {
 
 /*  Different animation for small screens */
 @media (max-width: 646px) {
-  .absoluteletters{
-    display:none;
+  .absoluteletters {
+    display: none;
   }
   .floatingletters {
     display: flex;
