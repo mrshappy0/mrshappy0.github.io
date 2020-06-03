@@ -177,14 +177,14 @@ html {
   height: 100%;
 }
 
-.info-tabs {
-  position: absolute;
-  bottom: 20%;
-  left: 2%;
-}
 
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
+    .info-tabs {
+      position: absolute;
+      bottom: 20%;
+      left: 2%;
+    }
   .floatingletters {
     display: none;
   }
@@ -210,16 +210,12 @@ html {
   }
 
   .absoluteletters:hover {
-    background-image: linear-gradient(white, red);
-    color: white;
     -webkit-text-stroke: 1px black;
     -webkit-text-fill-color: white;
     animation: pulsebck 2s linear alternate infinite forwards;
   }
 
   .addEffectIfHover {
-    background-image: linear-gradient(white, red);
-    color: white;
     -webkit-text-stroke: 1px black;
     -webkit-text-fill-color: white;
     animation: pulsebck 2s linear alternate infinite forwards;
@@ -335,15 +331,11 @@ html {
 
   @keyframes slideMenu {
     0% {
-      /* transform: rotateX(0deg); */
-      /* transform: rotateY(90deg); */
       transform: rotateZ(180deg);
       font-size: 0px;
       opacity: 0;
     }
     100% {
-      /* transform: rotateX(5400deg); */
-      /* transform: rotateY(5400deg); */
       transform: rotateZ(360deg);
       font-size: 40px;
       opacity: 1;
@@ -353,6 +345,15 @@ html {
 
 /*  Different animation for small screens */
 @media (max-width: 646px) {
+  .slideMenu:hover {
+    color: red;
+  }
+
+  .info-tabs {
+    position: absolute;
+    bottom: 15%;
+    transform: translateX(45%)
+  }
   .absoluteletters {
     display: none;
   }
@@ -419,7 +420,7 @@ html {
     100% {
       transform: rotateX(360deg);
       font-size: 40px;
-      opacity: 0.4;
+      opacity: 0.8;
     }
   }
 }
