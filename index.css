@@ -165,6 +165,9 @@ select {
 }
 
 /****^^^^^*********************Myers Reset***********^^^^***************/
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 100;
@@ -177,14 +180,13 @@ html {
   height: 100%;
 }
 
-
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
-    .info-tabs {
-      position: absolute;
-      bottom: 20%;
-      left: 2%;
-    }
+  .info-tabs {
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+  }
   .floatingletters {
     display: none;
   }
@@ -352,7 +354,7 @@ html {
   .info-tabs {
     position: absolute;
     bottom: 15%;
-    transform: translateX(45%)
+    transform: translateX(45%);
   }
   .absoluteletters {
     display: none;
@@ -423,4 +425,30 @@ html {
       opacity: 0.8;
     }
   }
+}
+
+/* ************Scroll CSS ***************** */
+.container {
+  max-height: 100vh;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  scroll-snap-type: y mandatory;
+}
+li {
+  border-bottom: 2rem solid white;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 100vh;
+}
+li#scroll-top {
+  border-bottom: 2rem solid white;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  height: 100vh;
 }
