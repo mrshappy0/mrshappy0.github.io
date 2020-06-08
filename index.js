@@ -55,7 +55,25 @@ function resizeWindow() {
 
 function scrollHandler() {
   setTimeout(() => {
-    console.log(scrollTopMax);
+    if(scrollContainer.scrollTop>=(scrollTopMax/4) &&scrollContainer.scrollTop<=(scrollTopMax/4)*2){
+      slideMenuContainer.childNodes[1].style.color = "red";
+      slideMenuContainer.childNodes[3].style.color = "";
+      slideMenuContainer.childNodes[5].style.color = "";
+    }
+    else if(scrollContainer.scrollTop>=(scrollTopMax/4)*2 &&scrollContainer.scrollTop<=(scrollTopMax/4)*3){
+      slideMenuContainer.childNodes[1].style.color = "";
+      slideMenuContainer.childNodes[3].style.color = "red";
+      slideMenuContainer.childNodes[5].style.color = "";
+    }
+    else if(scrollContainer.scrollTop>=(scrollTopMax/4)*3 &&scrollContainer.scrollTop<=(scrollTopMax/4)*4){
+      slideMenuContainer.childNodes[1].style.color = "";
+      slideMenuContainer.childNodes[3].style.color = "";
+      slideMenuContainer.childNodes[5].style.color = "red";
+    } else {
+      slideMenuContainer.childNodes[1].style.color = "";
+      slideMenuContainer.childNodes[3].style.color = "";
+      slideMenuContainer.childNodes[5].style.color = "";
+    }
   }, 250);
 }
 window.addEventListener("resize", () => resizeWindow());

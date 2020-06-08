@@ -461,15 +461,7 @@ html {
   border: 1px solid gray;
   scroll-snap-type: y mandatory;
 }
-/* li {
-  border-bottom: 0.5rem solid white;
-  text-align: center;
-  scroll-snap-align: start;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  height: 100vh;
-} */
+
 div#scroll-top {
   /* border-bottom: 0.5rem solid white; */
   text-align: center;
