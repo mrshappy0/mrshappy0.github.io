@@ -54,6 +54,7 @@ function resizeWindow() {
 }
 
 function scrollHandler() {
+  console.log("hit")
   setTimeout(() => {
     if(scrollContainer.scrollTop>=(scrollTopMax/4) &&scrollContainer.scrollTop<=(scrollTopMax/4)*2){
       slideMenuContainer.childNodes[1].style.color = "red";
@@ -79,4 +80,5 @@ function scrollHandler() {
 window.addEventListener("resize", () => resizeWindow());
 // window.addEventListener("resize", () => console.log("console",scrollTopMax))
 console.log(scrollContainer.scrollTopMax, scrollContainer);
-scrollContainer.addEventListener("scroll", () => scrollHandler());
+// scrollContainer.addEventListener("scroll", () => scrollHandler());
+scrollContainer.addEventListener("scroll", ()=> slideMenuContainer.style.color = "red")
