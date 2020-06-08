@@ -182,6 +182,15 @@ html {
 
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
+  li {
+    border-bottom: 0.5rem solid white;
+    text-align: center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
+  }
   .info-tabs {
     position: absolute;
     bottom: 20%;
@@ -281,6 +290,7 @@ html {
     position: relative;
     opacity: 0.1;
     margin: 2rem 0 0 0;
+    /* background-color: rgb(248, 101, 101); */
   }
 
   .slidein {
@@ -425,6 +435,23 @@ html {
       opacity: 0.8;
     }
   }
+  li {
+    border-bottom: 0.5rem solid white;
+    color: red;
+    text-align: center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+  div.section-top, div.section-bottom {
+    height: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 /* ************Scroll CSS ***************** */
@@ -434,17 +461,17 @@ html {
   border: 1px solid gray;
   scroll-snap-type: y mandatory;
 }
-li {
-  border-bottom: 2rem solid white;
+/* li {
+  border-bottom: 0.5rem solid white;
   text-align: center;
   scroll-snap-align: start;
   display: flex;
   flex-flow: column;
   justify-content: center;
   height: 100vh;
-}
-li#scroll-top {
-  border-bottom: 2rem solid white;
+} */
+div#scroll-top {
+  border-bottom: 0.5rem solid white;
   text-align: center;
   scroll-snap-align: start;
   display: flex;
