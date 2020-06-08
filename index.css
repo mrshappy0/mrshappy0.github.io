@@ -436,7 +436,7 @@ html {
     }
   }
   li {
-    border-bottom: 0.5rem solid white;
+    /* border-bottom: 0.5rem solid white; */
     color: red;
     text-align: center;
     scroll-snap-align: start;
@@ -471,7 +471,7 @@ html {
   height: 100vh;
 } */
 div#scroll-top {
-  border-bottom: 0.5rem solid white;
+  /* border-bottom: 0.5rem solid white; */
   text-align: center;
   scroll-snap-align: start;
   display: flex;
