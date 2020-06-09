@@ -7,7 +7,9 @@ adamShappyLettersContainer = document.querySelectorAll(
   "section.absoluteletters"
 );
 scrollContainer = document.querySelector("div.container");
-scrollTopMax = scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3);
+scrollTopMax =
+  scrollContainer.scrollTopMax ||
+  document.getElementById("one").getBoundingClientRect().height * 3;
 // scrollTopMax = document.getElementById("three").getBoundingClientRect();
 monogram[0].addEventListener("animationstart", animationListener, false);
 monogram[0].addEventListener("animationend", animationListener, false);
@@ -51,23 +53,31 @@ function animationListener(event) {
   }
 }
 function resizeWindow() {
-  console.log("hit", scrollContainer.scrollTopMax, (document.getElementById("one").getBoundingClientRect().height*3))
-  return scrollTopMax = (scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3));
+  return (scrollTopMax =
+    scrollContainer.scrollTopMax ||
+    document.getElementById("one").getBoundingClientRect().height * 3);
 }
 
 function scrollHandler() {
   setTimeout(() => {
-    if(scrollContainer.scrollTop>=(scrollTopMax/4) &&scrollContainer.scrollTop<=(scrollTopMax/4)*2){
+    if (
+      scrollContainer.scrollTop >= scrollTopMax / 4 &&
+      scrollContainer.scrollTop <= (scrollTopMax / 4) * 2
+    ) {
       slideMenuContainer.childNodes[1].style.color = "red";
       slideMenuContainer.childNodes[3].style.color = "";
       slideMenuContainer.childNodes[5].style.color = "";
-    }
-    else if(scrollContainer.scrollTop>=(scrollTopMax/4)*2 &&scrollContainer.scrollTop<=(scrollTopMax/4)*3){
+    } else if (
+      scrollContainer.scrollTop >= (scrollTopMax / 4) * 2 &&
+      scrollContainer.scrollTop <= (scrollTopMax / 4) * 3
+    ) {
       slideMenuContainer.childNodes[1].style.color = "";
       slideMenuContainer.childNodes[3].style.color = "red";
       slideMenuContainer.childNodes[5].style.color = "";
-    }
-    else if(scrollContainer.scrollTop>=(scrollTopMax/4)*3 &&scrollContainer.scrollTop<=(scrollTopMax/4)*4){
+    } else if (
+      scrollContainer.scrollTop >= (scrollTopMax / 4) * 3 &&
+      scrollContainer.scrollTop <= (scrollTopMax / 4) * 4
+    ) {
       slideMenuContainer.childNodes[1].style.color = "";
       slideMenuContainer.childNodes[3].style.color = "";
       slideMenuContainer.childNodes[5].style.color = "red";

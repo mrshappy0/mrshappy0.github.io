@@ -168,6 +168,12 @@ select {
 * {
   box-sizing: border-box;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 100;
@@ -182,6 +188,17 @@ html {
 
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
+  div.section-top {
+    height: 75%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  div.section-bottom {
+    height:25%;
+  }
+
   li {
     border-bottom: 0.5rem solid white;
     text-align: center;
@@ -190,6 +207,7 @@ html {
     flex-flow: column;
     justify-content: center;
     height: 100vh;
+    color: red;
   }
   .info-tabs {
     position: absolute;
@@ -436,8 +454,6 @@ html {
     }
   }
   li {
-    /* border-bottom: 0.5rem solid white; */
-    color: red;
     text-align: center;
     scroll-snap-align: start;
     display: flex;
@@ -445,7 +461,8 @@ html {
     justify-content: flex-start;
     height: 100vh;
   }
-  div.section-top, div.section-bottom {
+  div.section-top,
+  div.section-bottom {
     height: 50%;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -463,7 +480,6 @@ html {
 }
 
 div#scroll-top {
-  /* border-bottom: 0.5rem solid white; */
   text-align: center;
   scroll-snap-align: start;
   display: flex;
