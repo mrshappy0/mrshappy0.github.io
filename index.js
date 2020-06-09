@@ -9,7 +9,7 @@ adamShappyLettersContainer = document.querySelectorAll(
 scrollContainer = document.querySelector("div.container");
 scrollTopMax =
   scrollContainer.scrollTopMax ||
-  document.getElementById("one").getBoundingClientRect().height * 3;
+  document.getElementById("about").getBoundingClientRect().height * 3;
 // scrollTopMax = document.getElementById("three").getBoundingClientRect();
 monogram[0].addEventListener("animationstart", animationListener, false);
 monogram[0].addEventListener("animationend", animationListener, false);
@@ -55,7 +55,7 @@ function animationListener(event) {
 function resizeWindow() {
   return (scrollTopMax =
     scrollContainer.scrollTopMax ||
-    document.getElementById("one").getBoundingClientRect().height * 3);
+    document.getElementById("about").getBoundingClientRect().height * 3);
 }
 
 function scrollHandler() {

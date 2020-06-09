@@ -188,15 +188,35 @@ html {
 
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
+  div.image {
+    height: 80%;
+    width: 25%;
+  }
+  img.photo-me {
+    height: 70%;
+    object-fit: contain;
+    border: 7px double;
+    border-left: dotted;
+    border-right: dotted;
+    /* border-top: none; */
+  }
   div.section-top {
     height: 75%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 2rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   div.section-bottom {
-    height:25%;
+    height: 25%;
+  }
+
+  p.about-paragraph {
+    font-size: 25px;
+    line-height: 4rem;
+    text-align: justify;
+    align-self: center;
+    width: 50rem;
   }
 
   li {
@@ -207,7 +227,6 @@ html {
     flex-flow: column;
     justify-content: center;
     height: 100vh;
-    color: red;
   }
   .info-tabs {
     position: absolute;
@@ -340,7 +359,7 @@ html {
     }
   }
 
-  p {
+  p.sidebar {
     font-size: 0px;
     display: inline-block;
     margin: 1.5rem;
@@ -468,6 +487,28 @@ html {
     margin-bottom: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  div.section-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  p.about-paragraph {
+    font-size: 15px;
+    line-height: 2.4rem;
+    text-align: justify;
+    align-self: center;
+    width: 20rem;
+  }
+  .photo-me {
+    height: 75%;
+    object-fit: contain;
+    margin-top: 2rem;
+  }
+
+  div.image {
+    height: 100%;
   }
 }
 
