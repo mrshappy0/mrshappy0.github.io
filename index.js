@@ -51,7 +51,8 @@ function animationListener(event) {
   }
 }
 function resizeWindow() {
-  return (scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3));
+  console.log("hit", scrollContainer.scrollTopMax, (document.getElementById("one").getBoundingClientRect().height*3))
+  return scrollTopMax = (scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3));
 }
 
 function scrollHandler() {
@@ -78,11 +79,4 @@ function scrollHandler() {
   }, 250);
 }
 window.addEventListener("resize", () => resizeWindow());
-// window.addEventListener("resize", () => console.log("console",scrollTopMax))
-console.log(scrollContainer.scrollTopMax, scrollContainer);
 scrollContainer.addEventListener("scroll", () => scrollHandler());
-// scrollContainer.addEventListener("scroll", ()=> slideMenuContainer.style.color = "red")
-let sect1 = document.getElementById("one");
-let sect2 = document.getElementById("two");
-let sect3 = document.getElementById("three");
-console.log(sect1, sect2, sect3)
