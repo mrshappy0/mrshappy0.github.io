@@ -406,7 +406,8 @@ html {
   .info-tabs {
     position: absolute;
     bottom: 15%;
-    transform: translateX(45%);
+    right: 25%;
+    left: 25%;
   }
   .absoluteletters {
     display: none;
@@ -549,10 +550,10 @@ div.contact-logos {
   align-self: center;
   margin: 1rem;
 }
-div.contact-logos > a{
-  width:10%
+div.contact-logos > a {
+  width: 10%;
 }
 div.contact-logos > a > img {
-  width:100%;
+  width: 100%;
   object-fit: contain;
 }
