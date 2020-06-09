@@ -194,14 +194,14 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
   }
   img.photo-me {
     height: 70%;
     object-fit: contain;
-    border: 7px double;
-    border-left: dotted;
-    border-right: dotted;
+    border-bottom: 10px double;
+    padding: 2rem;
+    /* border-left: dotted; */
+    /* border-right: dotted; */
     align-self: center;
     /* border-top: none; */
   }
@@ -209,7 +209,7 @@ html {
     height: 75%;
     margin: 2rem 1rem 2rem 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
   div.section-bottom {
@@ -508,10 +508,12 @@ html {
   }
   .photo-me {
     height: 75%;
-    width:80%;
+    width: 80%;
     object-fit: contain;
     margin-top: 2rem;
     align-self: center;
+    border-bottom: 6px double;
+    padding: 1rem;
   }
 
   div.image-contact {
@@ -519,6 +521,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* align-self: center; */
   }
 }
 
@@ -542,10 +545,14 @@ div#scroll-top {
 div.contact-logos {
   display: flex;
   justify-content: space-around;
-  width:80%;
+  width: 80%;
   align-self: center;
   margin: 1rem;
 }
-div.contact-logos > img {
-  width: 10%;
+div.contact-logos > a{
+  width:10%
+}
+div.contact-logos > a > img {
+  width:100%;
+  object-fit: contain;
 }
