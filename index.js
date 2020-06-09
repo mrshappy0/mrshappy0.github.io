@@ -55,8 +55,6 @@ function resizeWindow() {
 }
 
 function scrollHandler() {
-  console.log(scrollTopMax)
-  slideMenuContainer.childNodes[1].innerText = `${scrollContainer.scrollTop}, ${scrollTopMax}`
   setTimeout(() => {
     if(scrollContainer.scrollTop>=(scrollTopMax/4) &&scrollContainer.scrollTop<=(scrollTopMax/4)*2){
       slideMenuContainer.childNodes[1].style.color = "red";
