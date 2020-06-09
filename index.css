@@ -188,9 +188,13 @@ html {
 
 /* stop spinning animation for small screens */
 @media (min-width: 646px) {
-  div.image {
+  div.image-contact {
     height: 80%;
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
   }
   img.photo-me {
     height: 70%;
@@ -198,6 +202,7 @@ html {
     border: 7px double;
     border-left: dotted;
     border-right: dotted;
+    align-self: center;
     /* border-top: none; */
   }
   div.section-top {
@@ -503,12 +508,17 @@ html {
   }
   .photo-me {
     height: 75%;
+    width:80%;
     object-fit: contain;
     margin-top: 2rem;
+    align-self: center;
   }
 
-  div.image {
+  div.image-contact {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -527,4 +537,15 @@ div#scroll-top {
   flex-flow: column;
   justify-content: left;
   height: 100vh;
+}
+
+div.contact-logos {
+  display: flex;
+  justify-content: space-around;
+  width:80%;
+  align-self: center;
+  margin: 1rem;
+}
+div.contact-logos > img {
+  width: 10%;
 }
