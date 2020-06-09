@@ -7,7 +7,7 @@ adamShappyLettersContainer = document.querySelectorAll(
   "section.absoluteletters"
 );
 scrollContainer = document.querySelector("div.container");
-scrollTopMax = scrollContainer.scrollTopMax||document.getElementById("three").getBoundingClientRect();
+scrollTopMax = scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3);
 // scrollTopMax = document.getElementById("three").getBoundingClientRect();
 monogram[0].addEventListener("animationstart", animationListener, false);
 monogram[0].addEventListener("animationend", animationListener, false);
@@ -51,11 +51,11 @@ function animationListener(event) {
   }
 }
 function resizeWindow() {
-  return (scrollTopMax = scrollContainer.scrollTopMax);
+  return (scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3);
 }
 
 function scrollHandler() {
-  console.log(scrollContainer)
+  console.log(scrollTopMax)
   slideMenuContainer.childNodes[1].innerText = `${scrollContainer.scrollTop}, ${scrollTopMax}`
   setTimeout(() => {
     if(scrollContainer.scrollTop>=(scrollTopMax/4) &&scrollContainer.scrollTop<=(scrollTopMax/4)*2){
