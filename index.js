@@ -7,7 +7,8 @@ adamShappyLettersContainer = document.querySelectorAll(
   "section.absoluteletters"
 );
 scrollContainer = document.querySelector("div.container");
-scrollTopMax = scrollContainer.scrollTopMax;
+scrollTopMax = scrollContainer.scrollTopMax||document.getElementById("three").getBoundingClientRect();
+// scrollTopMax = document.getElementById("three").getBoundingClientRect();
 monogram[0].addEventListener("animationstart", animationListener, false);
 monogram[0].addEventListener("animationend", animationListener, false);
 monogram[0].classList.add("slidein");
@@ -54,6 +55,7 @@ function resizeWindow() {
 }
 
 function scrollHandler() {
+  console.log(scrollContainer)
   slideMenuContainer.childNodes[1].innerText = `${scrollContainer.scrollTop}, ${scrollTopMax}`
   setTimeout(() => {
     if(scrollContainer.scrollTop>=(scrollTopMax/4) &&scrollContainer.scrollTop<=(scrollTopMax/4)*2){
@@ -82,3 +84,7 @@ window.addEventListener("resize", () => resizeWindow());
 console.log(scrollContainer.scrollTopMax, scrollContainer);
 scrollContainer.addEventListener("scroll", () => scrollHandler());
 // scrollContainer.addEventListener("scroll", ()=> slideMenuContainer.style.color = "red")
+let sect1 = document.getElementById("one");
+let sect2 = document.getElementById("two");
+let sect3 = document.getElementById("three");
+console.log(sect1, sect2, sect3)
