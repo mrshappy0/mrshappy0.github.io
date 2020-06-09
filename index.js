@@ -51,7 +51,7 @@ function animationListener(event) {
   }
 }
 function resizeWindow() {
-  return (scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3);
+  return (scrollContainer.scrollTopMax||(document.getElementById("one").getBoundingClientRect().height*3));
 }
 
 function scrollHandler() {
