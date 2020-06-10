@@ -14,8 +14,6 @@ html {
 }
 
 section.project-flex-scroll {
-  border-right: 1px solid white;
-  min-width: 95vw;
   scroll-snap-align: center;
   text-align: center;
 }

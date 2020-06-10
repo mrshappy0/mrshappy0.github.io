@@ -1,5 +1,8 @@
 /*  small screens css */
 @media (max-width: 646px) {
+    section.project-flex-scroll {
+        min-width: 90vw;
+      }
     @keyframes animatetop {
       from {
         top: 110%;
