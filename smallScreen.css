@@ -1,0 +1,150 @@
+/*  small screens css */
+@media (max-width: 646px) {
+    @keyframes animatetop {
+      from {
+        top: 110%;
+        opacity: 0;
+      }
+      to {
+        top: 80%;
+        opacity: 1;
+      }
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0);
+      width: 100%;
+      animation-name: animatetop;
+      animation-fill-mode: forwards;
+      animation-duration: 0.4s;
+      text-align: center;
+      color: white;
+      scale: 0.8;
+    }
+
+    .slideMenu:hover {
+      color: red;
+    }
+
+    .info-tabs {
+      position: absolute;
+      bottom: 15%;
+      right: 25%;
+      left: 25%;
+    }
+    .absoluteletters {
+      display: none;
+    }
+    .floatingletters {
+      display: flex;
+      justify-content: space-around;
+      font-size: 20px;
+      margin: 3rem;
+      color: black;
+    }
+    .background-img {
+      background-image: url(Adam-Monogram.png);
+      background-position: right;
+      height: 30vh;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+      width: 100%;
+      margin: 2rem 0 0 0;
+    }
+    .slidein {
+      animation: slidein 2.5s ease-in-out 1 forwards,
+        pulse 2.25s linear infinite alternate 2.5s;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.4;
+      }
+    }
+
+    @keyframes slidein {
+      0% {
+        transform: translateX(150%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    p.sidebar {
+      font-size: 0px;
+      display: block;
+      margin: 1.5rem;
+    }
+    .slideMenu {
+      animation-duration: 0.75s;
+      animation-name: slideMenu;
+      animation-iteration-count: 1;
+      animation-delay: 0.75s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes slideMenu {
+      0% {
+        transform: rotateX(0deg);
+        font-size: 0px;
+        opacity: 0;
+      }
+      100% {
+        transform: rotateX(360deg);
+        font-size: 40px;
+        opacity: 0.8;
+      }
+    }
+    li.main-li {
+      text-align: center;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+    }
+    div.section-top,
+    div.section-bottom {
+      height: 50%;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    div.section-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    p.about-paragraph {
+      font-size: 15px;
+      line-height: 2.4rem;
+      text-align: justify;
+      align-self: center;
+      width: 20rem;
+    }
+    .photo-me {
+      height: 75%;
+      width: 80%;
+      object-fit: contain;
+      margin-top: 2rem;
+      align-self: center;
+      border-bottom: 6px double;
+      padding: 1rem;
+    }
+
+    div.image-contact {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
