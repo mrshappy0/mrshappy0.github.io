@@ -7,11 +7,6 @@ html {
 }
 
 .x-slide-container {
-  /* max-height: 100vh; */
-  /* overflow-x: scroll;
-  border: 1px solid gray;
-  scroll-snap-type: x mandatory; */
-  /* font-family: sans-serif; */
   scroll-snap-type: x mandatory;
   display: flex;
   -webkit-overflow-scrolling: touch;
@@ -25,8 +20,10 @@ section.project-flex-scroll {
   text-align: center;
 }
 
-div#scroll-x-div{
+div#scroll-x-div {
   justify-content: unset;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .container {
