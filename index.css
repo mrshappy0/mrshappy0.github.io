@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .x-slide-container {
@@ -28,6 +29,7 @@ div#scroll-x-div {
   max-height: 100vh;
   overflow-y: scroll;
   border: 1px solid gray;
+  scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
 
