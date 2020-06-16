@@ -4,7 +4,8 @@ let monogram = document.getElementsByClassName("background-img"),
   scrollContainer = document.querySelector("div.container"),
   scrollTopMax =
     scrollContainer.scrollTopMax ||
-    document.getElementById("about").getBoundingClientRect().height * 3;
+    document.getElementById("about").getBoundingClientRect().height * 3,
+  adamSImg = document.querySelector(".adam-s");
 
 // Initial animation event handling
 monogram[0].addEventListener("animationstart", animationListener, false);
@@ -16,6 +17,11 @@ function animationListener(event) {
     Object.keys(slideMenu).forEach((el) => {
       slideMenu[el].classList.add("slideMenu");
     });
+    adamSImg.classList.add("add-dat-fade");
+  }
+  if (event.type === "animationend") {
+    adamSImg.classList.remove("add-dat-fade");
+    adamSImg.classList.add("add-new-fade");
   }
 }
 function resizeWindow() {

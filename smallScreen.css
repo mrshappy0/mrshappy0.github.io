@@ -29,6 +29,9 @@
     .slideMenu:hover {
       color: red;
     }
+    .adam-s {
+      display: none;
+    }
 
     .info-tabs {
       position: absolute;

@@ -68,6 +68,7 @@ body {
   color: rgb(139, 138, 138);
   min-height: 100%;
   background-color: white;
+  scrollbar-width: none;
 }
 
 /*?>?>?>?>?>?> modal for KYU rank?>>?>?>?? */
