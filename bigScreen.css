@@ -2,6 +2,7 @@
 @media (min-width: 646px) {
   section.project-flex-scroll {
     min-width: 95vw;
+    height: 90%;
   }
   @keyframes animatetop {
     from {
@@ -78,14 +79,15 @@
     top: 10%;
     left: 2%;
     height: 40%;
+    opacity: 0;
   }
 
   .add-dat-fade {
-    animation: fadeIn 4s linear;
+    animation: fadeIn 2.5s linear forwards 2.5s;
   }
 
   .add-new-fade {
-    animation: pulse 2.1s linear infinite alternate;
+    animation: pulse 3s linear infinite alternate;
   }
 
   .info-tabs {
@@ -116,7 +118,7 @@
       opacity: 0;
     }
     100% {
-      opacity: 1;
+      opacity: 0.5;
     }
   }
 
@@ -133,15 +135,16 @@
 
   .slidein {
     animation: slidein 5s ease-in-out 1 forwards,
-      pulse 2.1s linear infinite alternate 5s;
+      pulse 3s linear infinite alternate 5s;
   }
 
   @keyframes pulse {
-    0% {
-      opacity: 0.4;
+    0%, 100% {
+      opacity: 0.5;
     }
-    100% {
+    50% {
       opacity: 0.9;
+      /* background-color: skyblue; */
     }
   }
 
