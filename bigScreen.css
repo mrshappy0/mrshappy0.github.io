@@ -1,188 +1,194 @@
 /* CSS for Computer sized screens */
 @media (min-width: 646px) {
-    section.project-flex-scroll {
-        min-width: 95vw;
-      }
-    @keyframes animatetop {
-      from {
-        top: -300px;
-        opacity: 0;
-      }
-      to {
-        top: 0;
-        opacity: 1;
-      }
+  section.project-flex-scroll {
+    min-width: 95vw;
+  }
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
     }
-
-    .modal-content {
-      position: relative;
-      background-color: rgba(0, 0, 0, 0);
-      padding: 20px;
-      margin: auto;
-      width: 75%;
-      animation-name: animatetop;
-      animation-duration: 0.4s;
-      color: white;
-    }
-    div.image-contact {
-      height: 80%;
-      width: 25%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    img.photo-me {
-      height: 70%;
-      object-fit: contain;
-      border-bottom: 10px double;
-      padding: 2rem;
-      align-self: center;
-    }
-    div.section-top {
-      height: 75%;
-      margin: 2rem 1rem 2rem 1rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-    div.section-bottom {
-      height: 25%;
-    }
-
-    p.about-paragraph {
-      font-size: 25px;
-      line-height: 4rem;
-      text-align: justify;
-      align-self: center;
-      width: 50rem;
-    }
-
-    li.main-li {
-      border-bottom: 0.5rem solid white;
-      text-align: center;
-      scroll-snap-align: start;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .adam-s {
-      position: absolute;
-      top: 10%;
-      left: 2%;
-      height: 40%;
-    }
-
-    .add-dat-fade {
-      animation: fadeIn 4s linear;
-    }
-
-    .add-new-fade {
-      animation: pulse 2.1s linear infinite alternate;
-    }
-
-    .info-tabs {
-      position: absolute;
-      bottom: 20%;
-      left: 2%;
-    }
-    .floatingletters {
-      display: none;
-    }
-
-    .absoluteletters {
-      position: absolute;
-      top: 10%;
-      left: 2%;
-      display: flex;
-      flex-direction: column;
-      font-size: 1.9rem;
-      color: black;
-    }
-
-    .absoluteletters div {
-      align-self: center;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    .background-img {
-      background-image: url(Adam-Monogram.png);
-      background-position: right;
-      height: 55vh;
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: relative;
-      opacity: 0.1;
-      margin: 2rem 0 0 0;
-    }
-
-    .slidein {
-      animation: slidein 5s ease-in-out 1 forwards,
-        pulse 2.1s linear infinite alternate 5s;
-    }
-
-    @keyframes pulse {
-      0% {
-        opacity: 0.4;
-      }
-      100% {
-        opacity: 0.9;
-      }
-    }
-
-    @keyframes slidein {
-      0% {
-        transform: translateX(105%);
-        opacity: 0;
-      }
-      50% {
-        transform: translateX(-50%);
-        opacity: 0.3;
-      }
-      100% {
-        transform: translateX(0%);
-        opacity: 0.6;
-      }
-    }
-
-    p.sidebar {
-      font-size: 0px;
-      display: inline-block;
-      margin: 1.5rem;
-    }
-
-    .slideMenu:hover {
-      color: red;
-    }
-
-    .slideMenu {
-      animation-duration: 2.5s;
-      animation-name: slideMenu;
-      animation-iteration-count: 1;
-      animation-delay: 2.5s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-    }
-
-    @keyframes slideMenu {
-      0% {
-        transform: rotateZ(180deg);
-        font-size: 0px;
-        opacity: 0;
-      }
-      100% {
-        transform: rotateZ(360deg);
-        font-size: 40px;
-        opacity: 1;
-      }
+    to {
+      top: 0;
+      opacity: 1;
     }
   }
+
+  .modal-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    margin: auto;
+    width: 75%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: white;
+  }
+  div.image-contact {
+    height: 80%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img.photo-me {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+    padding: 2rem;
+    align-self: center;
+  }
+
+  .wave-bar{
+    width: 65%;
+    align-self: center;
+  }
+
+  div.section-top {
+    height: 75%;
+    margin: 2rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  div.section-bottom {
+    height: 25%;
+  }
+
+  p.about-paragraph {
+    font-size: 25px;
+    line-height: 4rem;
+    text-align: justify;
+    align-self: center;
+    width: 50rem;
+  }
+
+  li.main-li {
+    border-bottom: 0.5rem solid white;
+    text-align: center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .adam-s {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    height: 40%;
+  }
+
+  .add-dat-fade {
+    animation: fadeIn 4s linear;
+  }
+
+  .add-new-fade {
+    animation: pulse 2.1s linear infinite alternate;
+  }
+
+  .info-tabs {
+    position: absolute;
+    bottom: 20%;
+    left: 2%;
+  }
+  .floatingletters {
+    display: none;
+  }
+
+  .absoluteletters {
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.9rem;
+    color: black;
+  }
+
+  .absoluteletters div {
+    align-self: center;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .background-img {
+    background-image: url(Adam-Monogram.png);
+    background-position: right;
+    height: 55vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    opacity: 0.1;
+    margin: 2rem 0 0 0;
+  }
+
+  .slidein {
+    animation: slidein 5s ease-in-out 1 forwards,
+      pulse 2.1s linear infinite alternate 5s;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: translateX(105%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-50%);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 0.6;
+    }
+  }
+
+  p.sidebar {
+    font-size: 0px;
+    display: inline-block;
+    margin: 1.5rem;
+  }
+
+  .slideMenu:hover {
+    color: red;
+  }
+
+  .slideMenu {
+    animation-duration: 2.5s;
+    animation-name: slideMenu;
+    animation-iteration-count: 1;
+    animation-delay: 2.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideMenu {
+    0% {
+      transform: rotateZ(180deg);
+      font-size: 0px;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateZ(360deg);
+      font-size: 40px;
+      opacity: 1;
+    }
+  }
+}

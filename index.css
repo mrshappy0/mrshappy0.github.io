@@ -64,7 +64,7 @@ div#scroll-top {
 
 div.contact-logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 80%;
   align-self: center;
   margin: 1rem;
