@@ -13,10 +13,8 @@ a > button {
   position: absolute;
   left: 0;
   right: 0;
-  /* margin: auto; */
-  /* margin-top: 1.5rem; */
   display: table;
-  cursor: url(github-logo-3.png), auto;
+  cursor: url(photo-assets/github-logo.png), auto;
 }
 
 h1:hover {

@@ -70,6 +70,9 @@
     color: white;
     scale: 0.8;
   }
+  .resume-container{
+    position:unset;
+  }
 
   .slideMenu:hover {
     color: red;
