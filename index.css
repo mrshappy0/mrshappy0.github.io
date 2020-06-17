@@ -32,33 +32,45 @@ html {
   height: 20%;
   position: absolute;
   top: 37.5%;
-  right: 10%;
 }
 
 .l-arrows {
   height: 20%;
   position: absolute;
   top: 37.5%;
-  left: 10%;
 }
 
-.r-arrows:hover,
-.l-arrows:hover {
+.r-arrows,
+.l-arrows {
   animation-name: translate;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
-  /* animation-direction: alternate; */
   animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.r-arrows:hover,
+.l-arrows:hover {
+  /* filter: blur(0.5px); */
+  animation: clear 0.5s 1 linear forwards,
+            translate 5s infinite ease-in-out forwards;
+}
+
+@keyframes clear {
+  0% {
+    filter: blur(2.5px);
+  }
+  100%{
+    filter: blur(0.2px)
+  }
 }
 
 @keyframes translate {
   0%,
   100% {
-
+    transform: translateX(0%);
   }
   50% {
-    /* height: 23%; */
-    filter: invert(100%);
+    /* transform: rotateZ(5deg) translateX(20%); */
     transform: translateX(20%);
   }
 }

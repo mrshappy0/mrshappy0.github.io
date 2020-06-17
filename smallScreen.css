@@ -1,5 +1,33 @@
 /*  small screens css */
 @media (max-width: 646px) {
+  .l-arrows {
+    left: 5%;
+    filter: blur(0.5px);
+  }
+  .r-arrows {
+    right: 5%;
+    filter: blur(0.5px);
+  }
+  .r-arrows,
+  .l-arrows {
+    animation-name: translate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes translate {
+    0%,
+    100% {
+
+    }
+    50% {
+      /* height: 23%; */
+      filter: invert(100%);
+      transform: translateX(20%);
+    }
+  }
+
   section.project-flex-scroll {
     min-width: 90vw;
   }

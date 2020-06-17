@@ -29,6 +29,11 @@ function resizeWindow() {
     scrollContainer.scrollTopMax ||
     document.getElementById("about").getBoundingClientRect().height * 3);
 }
+
+// function resizeWindowForFont(){
+//   return screenWidth = screen.width;
+// }
+
 function scrollHandler() {
   if (
     scrollContainer.scrollTop >= scrollTopMax / 4 &&
@@ -37,10 +42,15 @@ function scrollHandler() {
     slideMenuContainer.childNodes[1].style.color = "red";
     slideMenuContainer.childNodes[3].style.color = "";
     slideMenuContainer.childNodes[5].style.color = "";
-    // console.log(slideMenuContainer.childNodes[1].children[0]);
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "xxx-large";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    if (screen.width <= 646) {
+      slideMenuContainer.childNodes[1].children[0].style.fontSize = "3.4rem";
+      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    } else {
+      slideMenuContainer.childNodes[1].children[0].style.fontSize = "5rem";
+      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    }
   } else if (
     scrollContainer.scrollTop >= (scrollTopMax / 4) * 2 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 3
@@ -48,9 +58,15 @@ function scrollHandler() {
     slideMenuContainer.childNodes[1].style.color = "";
     slideMenuContainer.childNodes[3].style.color = "red";
     slideMenuContainer.childNodes[5].style.color = "";
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "xxx-large";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    if (screen.width <= 646) {
+      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[3].children[0].style.fontSize = "3.4rem";
+      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    } else {
+      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[3].children[0].style.fontSize = "5rem";
+      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    }
   } else if (
     scrollContainer.scrollTop >= (scrollTopMax / 4) * 3 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 4
@@ -58,9 +74,15 @@ function scrollHandler() {
     slideMenuContainer.childNodes[1].style.color = "";
     slideMenuContainer.childNodes[3].style.color = "";
     slideMenuContainer.childNodes[5].style.color = "red";
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "xxx-large";
+    if (screen.width <= 646) {
+      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[5].children[0].style.fontSize = "3.4rem";
+    } else {
+      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+      slideMenuContainer.childNodes[5].children[0].style.fontSize = "5rem";
+    }
   } else {
     slideMenuContainer.childNodes[1].style.color = "";
     slideMenuContainer.childNodes[3].style.color = "";
@@ -72,6 +94,7 @@ function scrollHandler() {
 }
 
 window.addEventListener("resize", () => resizeWindow());
+// window.addEventListener("resize", () => resizeWindowForFont());
 scrollContainer.addEventListener("scroll", () => scrollHandler());
 
 // modal button action for CodeWars JS rank

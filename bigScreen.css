@@ -1,5 +1,15 @@
 /* CSS for Computer sized screens */
+
 @media (min-width: 646px) {
+  .r-arrows {
+    right: 10%;
+    filter: blur(2.0px);
+  }
+
+  .l-arrows {
+    left: 10%;
+    filter: blur(2.0px);
+  }
   section.project-flex-scroll {
     min-width: 95vw;
     height: 90%;
@@ -144,7 +154,6 @@
     }
     50% {
       opacity: 0.9;
-      /* background-color: skyblue; */
     }
   }
 
