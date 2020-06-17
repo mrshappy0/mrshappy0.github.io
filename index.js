@@ -105,7 +105,9 @@ let resumeModalBtn = document.getElementById("resume-modal-btn");
 let resumeModal = document.querySelector(".resume-modal");
 resumeModalBtn.onclick = function () {
   resumeModal.style.display = "block";
+  slideMenuContainer.style.visibility = "hidden";
 };
 resumeModal.onclick = function (e) {
   resumeModal.style.display = "none";
+  slideMenuContainer.style.visibility = "visible";
 };

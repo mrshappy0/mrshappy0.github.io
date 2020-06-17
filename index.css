@@ -185,8 +185,17 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.resume-modal {
+  padding: 0;
+  /* height: 100%; */
+  /* width:80%; */
+}
+
 .modal-content > p {
   margin-left: 1rem;
+}
+.resume-container{
+  height: 100%
 }
 
 .close-btn {
