@@ -1,5 +1,23 @@
 /*  small screens css */
 @media (max-width: 646px) {
+  a > button {
+    margin: auto;
+    margin-top: 0.5rem;
+    animation: grow 1s infinite ease-in-out alternate forwards;
+    color: grey;
+    border-color: white;
+    background-color: white;
+  }
+
+  @keyframes grow {
+    0%, 100%{
+
+    }
+    50%{
+      filter: brightness(1.25);
+    }
+  }
+
   .l-arrows {
     left: 5%;
     filter: blur(0.5px);
@@ -41,7 +59,7 @@
     }
   }
 
-  .modal-content,  {
+  .modal-content  {
     position: relative;
     background-color: rgba(0, 0, 0, 0);
     width: 100%;
@@ -164,10 +182,10 @@
 
   p.about-paragraph {
     font-size: 15px;
-    line-height: 2.4rem;
+    line-height: 2.3rem;
     text-align: justify;
     align-self: center;
-    width: 20rem;
+    width: 18rem;
   }
   .photo-me {
     height: 75%;

@@ -8,14 +8,15 @@
 }
 
 a > button {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 800;
   position: absolute;
   left: 0;
   right: 0;
-  margin: auto;
-  margin-top: 1.5rem;
+  /* margin: auto; */
+  /* margin-top: 1.5rem; */
   display: table;
+  cursor: url(github-logo-3.png), auto;
 }
 
 h1:hover {
@@ -187,8 +188,6 @@ button:hover {
 
 .resume-modal {
   padding: 0;
-  /* height: 100%; */
-  /* width:80%; */
 }
 
 .modal-content > p {

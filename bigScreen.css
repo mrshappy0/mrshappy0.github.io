@@ -1,6 +1,11 @@
 /* CSS for Computer sized screens */
 
 @media (min-width: 646px) {
+  a > button {
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+
   .r-arrows {
     right: 10%;
     filter: blur(2.0px);
