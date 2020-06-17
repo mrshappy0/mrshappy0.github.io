@@ -97,9 +97,11 @@ let modalBtn = document.getElementById("javascript-modal-btn");
 let modal = document.querySelector(".javascript-modal");
 modalBtn.onclick = function () {
   modal.style.display = "block";
+  slideMenuContainer.style.visibility = "hidden";
 };
 modal.onclick = function (e) {
   modal.style.display = "none";
+  slideMenuContainer.style.visibility = "visible";
 };
 let resumeModalBtn = document.getElementById("resume-modal-btn");
 let resumeModal = document.querySelector(".resume-modal");
