@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+#fuckDT {
+  border-radius: 30px;
+  border-color: red;
+  /* font-size: 20px; */
+}
+
 h1 {
   font-size: 25px;
   /* margin: 2rem; */
