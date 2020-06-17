@@ -5,17 +5,14 @@
 #fuckDT {
   border-radius: 30px;
   border-color: red;
-  /* font-size: 20px; */
 }
 
 h1 {
   font-size: 25px;
-  /* margin: 2rem; */
   font-weight: 800;
   position: absolute;
   left: 0;
   right: 0;
-  /* top: 5px; */
   margin: auto;
   margin-top: 1.5rem;
   display: table;
@@ -62,7 +59,6 @@ html {
 }
 .r-arrows:hover,
 .l-arrows:hover {
-  /* filter: blur(0.5px); */
   animation: clear 0.5s 1 linear forwards,
     translate 5s infinite ease-in-out forwards;
 }
@@ -82,7 +78,6 @@ html {
     transform: translateX(0%);
   }
   50% {
-    /* transform: rotateZ(5deg) translateX(20%); */
     transform: translateX(20%);
   }
 }
@@ -101,15 +96,14 @@ html {
   scrollbar-width: none;
 }
 
+/*Chrome, Safari, Edge*/
 .x-slide-container::-webkit-scrollbar {
-  /*Chrome, Safari, Edge*/
   display: none;
 }
 
 section.project-flex-scroll {
   scroll-snap-align: start;
   text-align: center;
-  /* border:2rem; */
 }
 
 div#scroll-x-div {
@@ -180,7 +174,7 @@ button:hover {
   color: white;
 }
 
-.modal {
+.javascript-modal, .resume-modal {
   display: none;
   position: fixed;
   padding-top: 50px;

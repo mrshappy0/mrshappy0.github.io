@@ -30,10 +30,6 @@ function resizeWindow() {
     document.getElementById("about").getBoundingClientRect().height * 3);
 }
 
-// function resizeWindowForFont(){
-//   return screenWidth = screen.width;
-// }
-
 function scrollHandler() {
   if (
     scrollContainer.scrollTop >= scrollTopMax / 4 &&
@@ -94,16 +90,22 @@ function scrollHandler() {
 }
 
 window.addEventListener("resize", () => resizeWindow());
-// window.addEventListener("resize", () => resizeWindowForFont());
 scrollContainer.addEventListener("scroll", () => scrollHandler());
 
 // modal button action for CodeWars JS rank
-let modalBtn = document.getElementById("modal-btn");
-let modal = document.querySelector(".modal");
-let closeBtn = document.querySelector(".close-btn");
+let modalBtn = document.getElementById("javascript-modal-btn");
+let modal = document.querySelector(".javascript-modal");
 modalBtn.onclick = function () {
   modal.style.display = "block";
 };
 modal.onclick = function (e) {
   modal.style.display = "none";
+};
+let resumeModalBtn = document.getElementById("resume-modal-btn");
+let resumeModal = document.querySelector(".resume-modal");
+resumeModalBtn.onclick = function () {
+  resumeModal.style.display = "block";
+};
+resumeModal.onclick = function (e) {
+  resumeModal.style.display = "none";
 };
