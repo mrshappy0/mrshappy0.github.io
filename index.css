@@ -4,9 +4,15 @@
 
 h1 {
   font-size: 25px;
-  margin: 2rem;
-  margin-top: 1rem;
+  /* margin: 2rem; */
   font-weight: 800;
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: 5px; */
+  margin: auto;
+  margin-top: 1.5rem;
+  display: table;
 }
 
 h1:hover {
@@ -52,15 +58,15 @@ html {
 .l-arrows:hover {
   /* filter: blur(0.5px); */
   animation: clear 0.5s 1 linear forwards,
-            translate 5s infinite ease-in-out forwards;
+    translate 5s infinite ease-in-out forwards;
 }
 
 @keyframes clear {
   0% {
     filter: blur(2.5px);
   }
-  100%{
-    filter: blur(0.2px)
+  100% {
+    filter: blur(0.2px);
   }
 }
 
