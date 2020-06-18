@@ -1,5 +1,8 @@
 /*  small screens css */
 @media (max-width: 646px) {
+  .btn2{
+    display:none;
+  }
   a > button {
     margin: auto;
     margin-top: 0.5rem;

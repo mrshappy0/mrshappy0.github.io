@@ -6,7 +6,7 @@ let monogram = document.getElementsByClassName("background-img"),
   scrollTopMax =
     scrollContainer.scrollTopMax ||
     document.getElementById("about").getBoundingClientRect().height * 3,
-  adamSImg = document.querySelector(".adam-s"),;
+  adamSImg = document.querySelector(".adam-s");
 
 // Initial animation event handling
 monogram[0].addEventListener("animationstart", animationListener, false);

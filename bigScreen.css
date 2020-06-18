@@ -1,6 +1,9 @@
 /* CSS for Computer sized screens */
 
 @media (min-width: 646px) {
+  .btn1{
+    display:none;
+  }
   a > button {
     margin: auto;
     margin-top: 1.5rem;
