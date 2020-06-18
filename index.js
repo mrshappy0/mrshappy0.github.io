@@ -1,3 +1,4 @@
+
 let monogram = document.getElementsByClassName("background-img"),
   slideMenu = document.getElementsByClassName("sidebar"),
   slideMenuContainer = document.querySelector("section.info-tabs"),
@@ -5,7 +6,7 @@ let monogram = document.getElementsByClassName("background-img"),
   scrollTopMax =
     scrollContainer.scrollTopMax ||
     document.getElementById("about").getBoundingClientRect().height * 3,
-  adamSImg = document.querySelector(".adam-s");
+  adamSImg = document.querySelector(".adam-s"),;
 
 // Initial animation event handling
 monogram[0].addEventListener("animationstart", animationListener, false);
@@ -103,13 +104,16 @@ modal.onclick = function (e) {
   modal.style.display = "none";
   slideMenuContainer.style.visibility = "visible";
 };
+// js for determining smartphone or not with resume modal
 let resumeModalBtn = document.getElementById("resume-modal-btn");
 let resumeModal = document.querySelector(".resume-modal");
-resumeModalBtn.onclick = function () {
-  resumeModal.style.display = "block";
-  slideMenuContainer.style.visibility = "hidden";
-};
-resumeModal.onclick = function (e) {
-  resumeModal.style.display = "none";
-  slideMenuContainer.style.visibility = "visible";
-};
+if(screen.width >= 646){
+  resumeModalBtn.onclick = function () {
+    resumeModal.style.display = "block";
+    slideMenuContainer.style.visibility = "hidden";
+  };
+  resumeModal.onclick = function (e) {
+    resumeModal.style.display = "none";
+    slideMenuContainer.style.visibility = "visible";
+  };
+}
