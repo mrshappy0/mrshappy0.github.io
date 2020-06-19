@@ -1,8 +1,8 @@
 /* CSS for Computer sized screens */
 
 @media (min-width: 646px) {
-  .btn1{
-    display:none;
+  .btn1 {
+    display: none;
   }
   a > button {
     margin: auto;
@@ -11,12 +11,12 @@
 
   .r-arrows {
     right: 10%;
-    filter: blur(2.0px);
+    filter: blur(2px);
   }
 
   .l-arrows {
     left: 10%;
-    filter: blur(2.0px);
+    filter: blur(2px);
   }
   section.project-flex-scroll {
     min-width: 95vw;
@@ -51,14 +51,15 @@
     justify-content: center;
   }
   img.photo-me {
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
     padding: 2rem;
+    padding-bottom: 1rem;
     align-self: center;
   }
 
-  .wave-bar{
+  .wave-bar {
     width: 65%;
     align-self: center;
   }
@@ -158,7 +159,8 @@
   }
 
   @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.5;
     }
     50% {
