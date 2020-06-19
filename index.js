@@ -14,7 +14,7 @@ monogram[0].addEventListener("animationend", animationListener, false);
 monogram[0].classList.add("slidein");
 
 function animationListener(event) {
-  let interval = 3000;
+  let interval = 5000;
   if (screen.width < 646) {
     interval = 2500;
     console.log(interval)
