@@ -1,4 +1,3 @@
-
 let monogram = document.getElementsByClassName("background-img"),
   slideMenu = document.getElementsByClassName("sidebar"),
   slideMenuContainer = document.querySelector("section.info-tabs"),
@@ -6,7 +5,8 @@ let monogram = document.getElementsByClassName("background-img"),
   scrollTopMax =
     scrollContainer.scrollTopMax ||
     document.getElementById("about").getBoundingClientRect().height * 3,
-  adamSImg = document.querySelector(".adam-s");
+  adamSImg = document.querySelector(".adam-s"),
+  scrollListItems = document.querySelectorAll("ul li");
 
 // Initial animation event handling
 monogram[0].addEventListener("animationstart", animationListener, false);
@@ -14,13 +14,24 @@ monogram[0].addEventListener("animationend", animationListener, false);
 monogram[0].classList.add("slidein");
 
 function animationListener(event) {
+  let interval = 5000;
+  if (screen.width < 646) {
+    interval = 2500;
+    console.log(interval)
+  }
   if (event.type === "animationstart") {
+    console.log(interval)
+    scrollContainer.style.overflowY = "hidden";
+    setInterval(() => {
+      scrollContainer.style.overflowY = "scroll";
+    }, interval);
     Object.keys(slideMenu).forEach((el) => {
       slideMenu[el].classList.add("slideMenu");
     });
     adamSImg.classList.add("add-dat-fade");
   }
   if (event.type === "animationend") {
+    document.body.style.position = "";
     adamSImg.classList.remove("add-dat-fade");
     adamSImg.classList.add("add-new-fade");
   }
@@ -37,55 +48,37 @@ function scrollHandler() {
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 2
   ) {
     slideMenuContainer.childNodes[1].style.color = "red";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = "2rem";
     slideMenuContainer.childNodes[3].style.color = "";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
     slideMenuContainer.childNodes[5].style.color = "";
-    if (screen.width <= 646) {
-      slideMenuContainer.childNodes[1].children[0].style.fontSize = "3.4rem";
-      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
-    } else {
-      slideMenuContainer.childNodes[1].children[0].style.fontSize = "5rem";
-      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
-    }
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
   } else if (
     scrollContainer.scrollTop >= (scrollTopMax / 4) * 2 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 3
   ) {
     slideMenuContainer.childNodes[1].style.color = "";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
     slideMenuContainer.childNodes[3].style.color = "red";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = "2rem";
     slideMenuContainer.childNodes[5].style.color = "";
-    if (screen.width <= 646) {
-      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[3].children[0].style.fontSize = "3.4rem";
-      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
-    } else {
-      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[3].children[0].style.fontSize = "5rem";
-      slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
-    }
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
   } else if (
     scrollContainer.scrollTop >= (scrollTopMax / 4) * 3 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 4
   ) {
     slideMenuContainer.childNodes[1].style.color = "";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
     slideMenuContainer.childNodes[3].style.color = "";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
     slideMenuContainer.childNodes[5].style.color = "red";
-    if (screen.width <= 646) {
-      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[5].children[0].style.fontSize = "3.4rem";
-    } else {
-      slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
-      slideMenuContainer.childNodes[5].children[0].style.fontSize = "5rem";
-    }
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = "2rem";
   } else {
     slideMenuContainer.childNodes[1].style.color = "";
-    slideMenuContainer.childNodes[3].style.color = "";
-    slideMenuContainer.childNodes[5].style.color = "";
     slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[3].style.color = "";
     slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[5].style.color = "";
     slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
   }
 }
@@ -107,7 +100,7 @@ modal.onclick = function (e) {
 // js for determining smartphone or not with resume modal
 let resumeModalBtn = document.getElementById("resume-modal-btn");
 let resumeModal = document.querySelector(".resume-modal");
-if(screen.width >= 646){
+if (screen.width >= 646) {
   resumeModalBtn.onclick = function () {
     resumeModal.style.display = "block";
     slideMenuContainer.style.visibility = "hidden";

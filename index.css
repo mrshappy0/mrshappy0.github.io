@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+/* ul{
+  position: fixed;
+} */
+
 #fuckDT {
   border-radius: 30px;
   border-color: red;
@@ -112,6 +116,7 @@ div#scroll-x-div {
 }
 
 .container {
+  /* position: fixed; */
   max-height: 100vh;
   overflow-y: scroll;
   border: 1px solid gray;
