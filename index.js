@@ -1,3 +1,48 @@
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var ytPlayerManager = (function YTPlayerManager() {
+  var players = [],
+    PLAYING = 1;
+
+  function register(id) {
+    players.push({
+      id: id,
+      player: makePlayer(id),
+    });
+  }
+
+  function makePlayer(id) {
+    return new YT.Player(id, {
+      events: {
+        onStateChange: function (event) {
+          if (event.data == PLAYING) {
+            videoPlaying(id);
+          }
+        },
+      },
+    });
+  }
+
+  function videoPlaying(id) {
+    players.forEach(function (item) {
+      if (item.id !== id) {
+        item.player.pauseVideo();
+      }
+    });
+  }
+
+  return { register };
+})();
+
+function onYouTubeIframeAPIReady() {
+  ytPlayerManager.register("rYumSLOp55c");
+  ytPlayerManager.register("zBAbWel-8cw");
+  ytPlayerManager.register("0QfXG_H0P2o");
+}
+
 let monogram = document.getElementsByClassName("background-img"),
   slideMenu = document.getElementsByClassName("sidebar"),
   slideMenuContainer = document.querySelector("section.info-tabs"),
@@ -17,10 +62,9 @@ function animationListener(event) {
   let interval = 5000;
   if (screen.width < 646) {
     interval = 2500;
-    console.log(interval)
+    console.log(interval);
   }
   if (event.type === "animationstart") {
-    console.log(interval)
     scrollContainer.style.overflowY = "hidden";
     setInterval(() => {
       scrollContainer.style.overflowY = "scroll";
