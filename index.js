@@ -62,7 +62,6 @@ function animationListener(event) {
   let interval = 5000;
   if (screen.width < 646) {
     interval = 2500;
-    console.log(interval);
   }
   if (event.type === "animationstart") {
     scrollContainer.style.overflowY = "hidden";
@@ -87,43 +86,48 @@ function resizeWindow() {
 }
 
 function scrollHandler() {
+  if (screen.width > 646) {
+    fontSize = "2rem";
+  } else {
+    fontSize = "";
+  }
   if (
     scrollContainer.scrollTop >= scrollTopMax / 4 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 2
   ) {
     slideMenuContainer.childNodes[1].style.color = "red";
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "2rem";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[3].style.color = "";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[5].style.color = "";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = fontSize;
   } else if (
     scrollContainer.scrollTop >= (scrollTopMax / 4) * 2 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 3
   ) {
     slideMenuContainer.childNodes[1].style.color = "";
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[3].style.color = "red";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "2rem";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[5].style.color = "";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = fontSize;
   } else if (
     scrollContainer.scrollTop >= (scrollTopMax / 4) * 3 &&
     scrollContainer.scrollTop <= (scrollTopMax / 4) * 4
   ) {
     slideMenuContainer.childNodes[1].style.color = "";
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[3].style.color = "";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[5].style.color = "red";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "2rem";
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = fontSize;
   } else {
     slideMenuContainer.childNodes[1].style.color = "";
-    slideMenuContainer.childNodes[1].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[1].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[3].style.color = "";
-    slideMenuContainer.childNodes[3].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[3].children[0].style.fontSize = fontSize;
     slideMenuContainer.childNodes[5].style.color = "";
-    slideMenuContainer.childNodes[5].children[0].style.fontSize = "";
+    slideMenuContainer.childNodes[5].children[0].style.fontSize = fontSize;
   }
 }
 
