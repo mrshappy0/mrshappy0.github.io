@@ -261,7 +261,7 @@ section.project-content {
 }
 
 .content {
-  margin: 12em;
+  margin: 12em 8em 12em;
   margin-left: 0;
   padding: 1em;
   padding-left: 0;
@@ -341,6 +341,16 @@ section.project-content {
   ul.sci {
     width: 100vw;
     justify-content: space-evenly;
+  }
+}
+
+.content {
+  width: calc(100% - 100px)
+}
+
+@media(max-width: 1014){
+  .content {
+    width: calc(100% - 100px);
   }
 }
 
