@@ -344,9 +344,9 @@ section.project-content {
   }
 }
 
-.content {
+/* .content {
   width: calc(100% - 100px)
-}
+} */
 
 @media(max-width: 1014){
   .content {
