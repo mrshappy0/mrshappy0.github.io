@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adam Shappy</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:wght@200;300;400;600;700&effect=anaglyph&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <section class="bg banner projects" id="sec">
+      <header>
+        <a class="logo-computer" href=""
+          ><img src="adam-mono-text.png" alt=""
+        /></a>
+        <a class="logo-mobile" href=""
+          ><img src="adam-monogram-mobile.png" alt=""
+        /></a>
+        <div id="toggle" onclick="toggle()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      <main>
+        <div class="iframe-container">
+          <iframe
+            class="demo-video"
+            src="https://www.youtube.com/embed/rYumSLOp55c?enablejsapi=1"
+            allowfullscreen
+          >
+          </iframe>
+          <a href="https://github.com/mrshappy0/corona-warrior-frontend"
+            ><button>
+              Corona Warrior (3D game)&nbsp;<span
+                id="proj-cursor"
+                style="display: inline-block;"
+              >
+                <img src="contact-logos/github-small.png" alt=""
+              /></span></button
+          ></a>
+        </div>
+        <div class="iframe-container">
+          <iframe
+            class="demo-video"
+            src="https://www.youtube.com/embed/zBAbWel-8cw?enablejsapi=1"
+            allowfullscreen
+          >
+          </iframe>
+          <a href="https://github.com/mrshappy0/enduro-trainer"
+            ><button>
+              FrontRange Trainer&nbsp;<span
+                id="proj-cursor"
+                style="display: inline-block;"
+              >
+                <img src="contact-logos/github-small.png" alt=""
+              /></span></button
+          ></a>
+        </div>
+        <div class="iframe-container">
+          <iframe
+            class="demo-video"
+            src="https://www.youtube.com/embed/0QfXG_H0P2o?enablejsapi=1"
+            allowfullscreen
+          >
+          </iframe>
+          <a href="https://github.com/mrshappy0/quarantine-chat-app-frontend"
+            ><button>
+              Quarantine Chat App&nbsp;<span
+                id="proj-cursor"
+                style="display: inline-block;"
+              >
+                <img src="contact-logos/github-small.png" alt=""
+              /></span></button
+          ></a>
+        </div>
+      </main>
+    </section>
+
+    <div id="navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

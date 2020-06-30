@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+
+.projects {
+  padding: 260px 30px 150px 30px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+div.iframe-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(68, 68, 68, 0.493);
+  border-radius: 5px;
+  border: 2px outset rgb(0, 0, 0);
+  border-top-color: red;
+  border-left-color: rgb(209, 24, 255);
+  border-right-color: rgb(255, 251, 0);
+  border-bottom-color: rgb(15, 39, 255);
+}
+
+
+iframe.demo-video{
+  align-self: center;
+}
+.iframe-container a {
+  align-self: center;
+  margin-top:1em;
+}
+
+.iframe-container a button{
+  align-self: center;
+  padding:1em;
+  font-weight: 300;
+  color:rgb(0, 0, 0);
+  box-shadow:20px 20px rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 15px;
+  border: 5px outset rgb(0, 0, 0);
+  border-top-color: red;
+  border-left-color: rgb(209, 24, 255);
+  border-right-color: rgb(255, 251, 0);
+  border-bottom-color: rgb(15, 39, 255);
+  filter: saturate(0%);
+  transition: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.iframe-container a button:hover {
+  background-color:rgb(255, 255, 255);
+  filter: saturate(100%);
+  font-weight: 300;
+  box-shadow:0px 20px #a2a2a2;
+  cursor:pointer, auto;
+  letter-spacing: 2px;
+}
+
+.iframe-container a button:hover span#proj-cursor {
+  background-color: white;
+  animation-name: blinking-2;
+  animation-duration: 1.1s;
+  animation-timing-function: steps(1, end);
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.iframe-container a button:hover span#proj-cursor img {
+  background-color: white;
+  /* animation-name: blinking-3;
+  animation-duration: 1.1s;
+  animation-timing-function: steps(5, end);
+  animation-iteration-count: infinite;
+  animation-direction: normal; */
+}
+
+@keyframes blinking-2 {
+  0%, 100% {
+    /* background-color: rgb(2, 2, 2); */
+    border-bottom: 2px solid black;
+  }
+  50% {
+    /* background-color: rgb(253, 253, 253); */
+    border-bottom: 2px solid white;
+  }
+}
+/*
+@keyframes blinking-3 {
+  0%, 100% {
+    filter: invert(100%);
+  }
+  50% {
+    filter: invert(0%);
+  }
+} */
+
+span#proj-cursor{
+  background-color: white;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+@media (min-width: 767px) {
+  main {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  div.iframe-container {
+    padding: 3em;
+    margin: 3em;
+    flex-direction: column;
+  }
+  #navigation.active {
+    z-index: 3;
+    right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  div.iframe-container {
+    padding: 2em 0 2em 0;
+    margin: 0.5em;
+    margin-bottom: 5em;
+    flex-direction: column;
+    min-width: 20%;
+    max-width: 70%;
+    align-self: center;
+  }
+
+  iframe.demo-video{
+    width: 70%;
+    align-self: center;
+  }
+  .iframe-container a {
+    align-self: center;
+  }
+
+  #navigation.active {
+    z-index: 3;
+    right: 0;
+  }
+
+}

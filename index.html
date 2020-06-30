@@ -39,10 +39,7 @@
       href="https://fonts.googleapis.com/css?family=Nunito+Sans:wght@200;300;400;600;700&effect=anaglyph&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="myers.css" />
-    <link rel="stylesheet" href="bigScreen.css" />
-    <link rel="stylesheet" href="smallScreen.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon-16x16.png" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -70,165 +67,68 @@
     <title>Adam Shappy</title>
   </head>
   <body>
-    <div class="javascript-modal">
-      <div class="modal-content">
-        <p>CodeWars Honor Percentile: Top 14.703%</p>
-        <img
-          src="https://www.codewars.com/users/mrshappy0/badges/large"
-          alt=""
-        />
-      </div>
-    </div>
-    <div class="resume-modal">
-      <div class="modal-content resume-container">
-        <!-- <a href="photo-assets/Resume.docx.pdf" width="100%" height="100%"></a> -->
-        <embed
-          src="photo-assets/Resume.docx.pdf#toolbar=1"
-          type="application/pdf"
-          width="100%"
-          height="100%"
-        />
-      </div>
-    </div>
-    <a href="#scroll-top"
-      ><img class="adam-s" src="photo-assets/ASVertical.png" alt=""
-    /></a>
-    <div class="container">
-      <ul>
-        <div id="scroll-top">
-          <div class="background-img pulsing"></div>
-          <section class="floatingletters">
-            <div>A</div>
-            <div>D</div>
-            <div>A</div>
-            <div>M</div>
-            <div>&nbsp;</div>
-            <div>S</div>
-            <div>H</div>
-            <div>A</div>
-            <div>P</div>
-            <div>P</div>
-            <div>Y</div>
-          </section>
-          <section class="info-tabs">
-            <p class="sidebar">
-              <a href="#about"><span class="">About</span></a>
-            </p>
-            <p class="sidebar">
-              <a href="#projects"><span class="">Projects</span></a>
-            </p>
-            <p class="sidebar">
-              <a href="#contacts"><span class="">Contact</span></a>
-            </p>
-          </section>
+    <section class="banner" id="sec">
+      <header>
+        <a class="logo-computer" href=""
+          ><img src="adam-mono-text.png" alt=""
+        /></a>
+        <a class="logo-mobile" href=""
+          ><img src="adam-monogram-mobile.png" alt=""
+        /></a>
+        <div id="toggle" onclick="toggle()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <li id="about" class="main-li">
-          <div class="section-top">
-            <p class="about-paragraph">
-              Full Stack Developer who employs modern languages to creatively
-              solve problems. Actively learning new technologies to remain
-              relevant in a dynamic industry. Successfully learning and building
-              upon the following technologies: React, Ruby on Rails, HTML5,
-              CSS3, MongoDB,
-              <button id="javascript-modal-btn" class="btn3">JavaScript</button
-              >, Git workflow, GitHub, Express, Babylon.js, Svelte, PostgreSQL
-              and Node.js.
-              <button id="" class="btn1">
-                <a href="photo-assets/Resume.docx.pdf" width="100%" height="10%"
+      </header>
+      <div class="content">
+        <h2>
+          Hello World,<br />I'm <span> Adam Shappy </span
+          ><span class="whitespace-anim">&nbsp;&nbsp;</span>
+        </h2>
+        <p>
+          Full Stack Developer who employs modern languages to creatively solve
+          problems. Actively learning new technologies to remain relevant in a
+          dynamic industry. Successfully learning and building upon the
+          following technologies: React, Ruby on Rails, HTML5, CSS3, MongoDB,Git
+          workflow, GitHub, Express, Babylon.js, Svelte, PostgreSQL and
+          Node.js.<br />
+          <a href="photo-assets/Resume.docx.pdf" target="_blank"
+            >View My Resume</a
+          >
+          <!-- <a href="photo-assets/Resume.docx.pdf" width="100%" height="10%"
                   >RESUME</a
-                ></button
-              ><button id="resume-modal-btn" class="btn2">
-                RESUME
-              </button>
-            </p>
-          </div>
-          <div class="section-bottom"></div>
+                > -->
+        </p>
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="https://linkedin.com/in/adam-shappy" target="_blank"
+            ><img src="contact-logos/linkedin.png" alt=""
+          /></a>
         </li>
-        <li id="projects" class="main-li">
-          <div id="scroll-x-div" class="section-top x-slide-container">
-            <section id="cWarrior" class="project-flex-scroll absolute-holder">
-              <div class="iframe-container">
-                <iframe
-                  class="demo-video"
-                  src="https://www.youtube.com/embed/rYumSLOp55c?enablejsapi=1"
-                >
-                </iframe>
-                <a href="https://github.com/mrshappy0/corona-warrior-frontend"
-                  ><button>Corona Warrior (3D game)</button></a
-                >
-              </div>
-              <a href="#frTrainer"
-                ><img
-                  class="r-arrows"
-                  src="photo-assets/right-arrow.png"
-                  alt=""
-              /></a>
-            </section>
-            <section id="frTrainer" class="project-flex-scroll absolute-holder">
-              <div class="iframe-container">
-                <iframe
-                  class="demo-video"
-                  src="https://www.youtube.com/embed/zBAbWel-8cw?enablejsapi=1"
-                >
-                </iframe>
-                <a href="https://github.com/mrshappy0/enduro-trainer"
-                  ><button>FrontRange Trainer</button></a
-                >
-              </div>
-              <a href="#cWarrior"
-                ><img class="l-arrows" src="photo-assets/left-arrow.png" alt=""
-              /></a>
-              <a href="#qCApp"
-                ><img
-                  class="r-arrows"
-                  src="photo-assets/right-arrow.png"
-                  alt=""
-              /></a>
-            </section>
-            <section id="qCApp" class="project-flex-scroll absolute-holder">
-              <div class="iframe-container">
-                <iframe
-                  class="demo-video"
-                  src="https://www.youtube.com/embed/0QfXG_H0P2o?enablejsapi=1"
-                >
-                </iframe>
-                <a
-                  href="https://github.com/mrshappy0/quarantine-chat-app-frontend"
-                  ><button>Quarantine Chat App</button></a
-                >
-              </div>
-              <a href="#frTrainer"
-                ><img class="l-arrows" src="photo-assets/left-arrow.png" alt=""
-              /></a>
-            </section>
-          </div>
-          <div class="section-bottom"></div>
+        <li>
+          <a href="https://www.github.com/mrshappy0" target="_blank"
+            ><img src="contact-logos/github.png" alt=""
+          /></a>
         </li>
-        <li id="contacts" class="main-li">
-          <div class="section-top">
-            <div class="image-contact">
-              <img class="photo-me" src="photo-assets/me_hiking.jpg" alt="" />
-              <img class="wave-bar" src="photo-assets/wavebar.png" alt="" />
-              <div class="contact-logos">
-                <a
-                  href="https://www.linkedin.com/in/adam-shappy/"
-                  target="_blank"
-                  ><img src="contact-logos/linkedin.png" alt=""
-                /></a>
-                <a href="https://github.com/mrshappy0/" target="_blank"
-                  ><img src="contact-logos/github.png" alt=""
-                /></a>
-                <a href="https://medium.com/@adam_shappy" target="_blank"
-                  ><img src="contact-logos/medium.png" alt=""
-                /></a>
-                <a href="mailto:ajs11300@gmail.com"
-                  ><img src="contact-logos/email.png" alt=""
-                /></a>
-              </div>
-            </div>
-          </div>
-          <div class="section-bottom"></div>
+        <li>
+          <a href="https://medium.com/@adam_shappy" target="_blank"
+            ><img src="contact-logos/medium.png" alt=""
+          /></a>
         </li>
+        <li>
+          <a href="mailto:ajs11300@gmail.com"
+            ><img src="contact-logos/email.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <div id="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
     <script src="index.js"></script>
