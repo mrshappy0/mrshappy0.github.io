@@ -133,7 +133,7 @@ header #toggle span:nth-child(3) {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 100px;
+  padding: 100px 50px 100px 50px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -348,9 +348,24 @@ section.project-content {
   width: calc(100% - 100px)
 } */
 
-@media(max-width: 1014){
+@media(max-width: 1014px){
   .content {
-    width: calc(100% - 100px);
+    width: calc(100% - 130px);
+  }
+
+  .content h2 {
+    font-size: 1.8em;
+  }
+
+  #contactEmail {
+    font-size: 1.7em;
+  }
+}
+
+@media(max-width: 767px){
+  .content {
+    width: 100%;
+    max-width: unset;
   }
 }
 
