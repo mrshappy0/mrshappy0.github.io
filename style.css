@@ -83,22 +83,12 @@ header #toggle {
 header #toggle span {
   content: "";
   position: absolute;
+  left: 0;
   top: 50%;
   width: 100%;
   border-radius: 2px;
   height: 2px;
   background-color: #fff;
-  transition: all 1s;
-}
-
-header #toggle span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  opacity: 1;
-  left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
 }
@@ -162,7 +152,6 @@ header #toggle span:nth-child(3) {
 
   .banner {
     background-image: white;
-    /* background: url(vermont-2.jpg); */
     background-attachment: fixed;
   }
 }
@@ -177,7 +166,6 @@ header #toggle span:nth-child(3) {
   div.content {
     font-size: 0.5em;
     margin: 3.5em 0;
-    /* background-color: rgb(209, 61, 209); */
   }
 
   .banner .content p {
@@ -244,11 +232,6 @@ header #toggle span:nth-child(3) {
   margin: 15px 0;
 }
 
-a .r-arrows,
-a .l-arrows {
-  height: 100px;
-}
-
 .projects {
   display: flex;
   flex-direction: row;
@@ -294,7 +277,6 @@ section.project-content {
   position: absolute;
   display: flex;
   flex-direction: column;
-  /* right: 100px; */
 }
 
 .sci li {
@@ -343,10 +325,6 @@ section.project-content {
     justify-content: space-evenly;
   }
 }
-
-/* .content {
-  width: calc(100% - 100px)
-} */
 
 @media(max-width: 1014px){
   .content {
@@ -397,13 +375,12 @@ section.project-content {
   padding: 8px 20px;
   text-decoration: none;
   font-size: 1em;
-  font-weight: 600;
-  border-radius: 5px;
+  font-weight: 300;
   margin-left: 1em;
   box-shadow: 20px 20px rgb(0, 0, 0);
   cursor: pointer;
   border-radius: 15px;
-  border: 5px outset rgb(0, 0, 0);
+  border: 5px outset;
   border-top-color: red;
   border-left-color: rgb(209, 24, 255);
   border-right-color: rgb(255, 251, 0);
@@ -416,7 +393,6 @@ section.project-content {
 .content a:hover {
   background-color: rgb(255, 255, 255);
   filter: saturate(100%);
-  font-weight: 300;
   box-shadow: 0px 20px #cecece;
   letter-spacing: 2px;
 }
