@@ -1,14 +1,15 @@
 :root {
-  --color-bg: #fafaf8;
-  --color-bg-elevated: #ffffff;
-  --color-text: #18181b;
-  --color-text-secondary: #52525b;
-  --color-text-tertiary: #a1a1aa;
-  --color-border: #e4e4e7;
-  --cmyk-red: #ff3b30;
-  --cmyk-magenta: #d118ff;
-  --cmyk-yellow: #fffb00;
-  --cmyk-blue: #0f27ff;
+  --color-bg: #f5f4f0;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #5c5c5c;
+  --color-text-muted: #969696;
+  --color-border: #e0ded8;
+  --color-grid: rgba(0, 0, 0, 0.04);
+  --glitch-red: #ff3b30;
+  --glitch-magenta: #d118ff;
+  --glitch-yellow: #ffd600;
+  --glitch-blue: #0055ff;
 }
 
 *,
@@ -22,59 +23,25 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--color-bg);
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
   min-height: 100vh;
 }
 
 ::selection {
-  background: var(--cmyk-magenta);
+  background: #1a1a1a;
   color: #fff;
 }
 
 .section {
-  padding: 6rem 2rem;
-  max-width: 840px;
+  padding: 7rem 2rem;
+  max-width: 780px;
   margin: 0 auto;
-}
-
-.section-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  color: var(--color-text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.75rem;
-}
-
-.section-heading {
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
-  line-height: 1.2;
-}
-
-.cmyk-border {
-  border: 2px solid;
-  border-top-color: var(--cmyk-red);
-  border-left-color: var(--cmyk-magenta);
-  border-right-color: var(--cmyk-yellow);
-  border-bottom-color: var(--cmyk-blue);
-}
-
-.cmyk-border-subtle {
-  border: 1px solid;
-  border-top-color: rgba(255, 59, 48, 0.3);
-  border-left-color: rgba(209, 24, 255, 0.3);
-  border-right-color: rgba(255, 251, 0, 0.3);
-  border-bottom-color: rgba(15, 39, 255, 0.3);
 }
 
 @media (max-width: 640px) {

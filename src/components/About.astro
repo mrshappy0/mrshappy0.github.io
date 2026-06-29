@@ -2,74 +2,64 @@
 ---
 
 <section id="about" class="section">
-  <p class="section-label">About</p>
-  <h2 class="section-heading">I build where AI meets engineering.</h2>
-  <div class="about-text">
-    <p>
-      Senior Software Engineer with 6 years across cloud-native platforms,
-      developer tooling, and AI agent systems. Currently at Cox Automotive,
-      I built conversational AI agents enabling natural language CRM interactions
-      and developed MCP tooling adopted across hundreds of engineering teams.
-    </p>
-    <p>
-      I combine full-stack engineering depth with customer-facing deployment
-      to bridge AI capabilities and real business impact. Outside of work I
-      run a 30+ container home lab &mdash; local LLMs, agent frameworks, zero-trust
-      architecture.
-    </p>
-  </div>
-  <div class="tech-tags">
-    <span class="tag">TypeScript</span>
-    <span class="tag">Python</span>
-    <span class="tag">Go</span>
-    <span class="tag">Node.js</span>
-    <span class="tag">.NET</span>
-    <span class="tag">AWS CDK</span>
-    <span class="tag">Lambda</span>
-    <span class="tag">DynamoDB</span>
-    <span class="tag">React</span>
-    <span class="tag">Next.js</span>
-    <span class="tag">React Native</span>
-    <span class="tag">GraphQL</span>
-    <span class="tag">Docker</span>
-    <span class="tag">PostgreSQL</span>
-    <span class="tag">MongoDB</span>
-    <span class="tag">MCP</span>
-    <span class="tag">LLMs</span>
+  <div class="section-marker"></div>
+  <p class="about-p">
+    Senior engineer with 6 years building across cloud-native platforms, AI agent systems,
+    and developer tooling. At <strong>Cox Automotive</strong> I built conversational AI agents and an
+    internal MCP developer platform adopted by hundreds of teams.
+  </p>
+  <p class="about-p">
+    Outside of work I run a 30+ container home lab &mdash; local LLMs, agent frameworks, zero-trust
+    architecture &mdash; and maintain <strong>Mini Mealie</strong>, an open-source browser extension
+    with 2,000+ active users.
+  </p>
+  <div class="tech-line">
+    <span class="tech-prefix">$</span>
+    <span class="tech-items">TypeScript · Python · Go · Node.js · .NET · AWS · React · Next.js · React Native · Docker · PostgreSQL · MongoDB · MCP · LLMs</span>
   </div>
 </section>
 
 <style>
-  .about-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: 1rem;
+  .section-marker {
+    width: 12px;
+    height: 12px;
+    background: var(--color-text);
+    opacity: 0.15;
+    margin-bottom: 2rem;
+  }
+
+  .about-p {
+    font-size: 1.0625rem;
     line-height: 1.7;
     color: var(--color-text-secondary);
-    max-width: 620px;
-    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-bottom: 1.25rem;
   }
 
-  .tech-tags {
+  .about-p strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .tech-line {
+    margin-top: 2rem;
     display: flex;
-    flex-wrap: wrap;
     gap: 0.5rem;
+    align-items: flex-start;
   }
 
-  .tag {
+  .tech-prefix {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
-    padding: 0.3rem 0.65rem;
-    border-radius: 4px;
-    background: var(--color-bg-elevated);
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-border);
-    filter: saturate(0%);
-    transition: filter 0.4s ease;
+    color: var(--color-text-muted);
+    opacity: 0.5;
+    padding-top: 0.1rem;
   }
 
-  .tag:hover {
-    filter: saturate(100%);
+  .tech-items {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
   }
 </style>

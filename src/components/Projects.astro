@@ -2,85 +2,104 @@
 ---
 
 <section id="projects" class="section">
-  <p class="section-label">Projects</p>
-  <h2 class="section-heading">What I've built.</h2>
+  <div class="section-marker"></div>
+  <h2 class="section-head">Projects</h2>
 
-  <div class="project-list">
+  <div class="proj-list">
 
-    <div class="project-card cmyk-border-subtle">
-      <div class="project-header">
-        <h3 class="project-name">Mini Mealie</h3>
-        <span class="project-badge">Chrome &amp; Firefox</span>
+    <article class="proj-card">
+      <div class="proj-top">
+        <h3 class="proj-name">Mini Mealie</h3>
+        <span class="proj-tag">Chrome + Firefox</span>
       </div>
-      <p class="project-desc">Open-source browser extension with 2,000+ active users and growing international adoption. Built with AI-assisted workflows and custom MCP tools. Cross-browser Firefox support added via community collaboration.</p>
-      <span class="project-stack">TypeScript &middot; MCP</span>
-    </div>
+      <p class="proj-desc">Open-source browser extension with <strong>2,000+</strong> active users and growing international adoption. Built with AI-assisted workflows and custom MCP tooling.</p>
+      <span class="proj-tech">TypeScript · MCP</span>
+    </article>
 
-    <div class="project-card cmyk-border-subtle">
-      <div class="project-header">
-        <h3 class="project-name">Self-Hosted Infrastructure</h3>
-        <span class="project-badge">Home Lab</span>
+    <article class="proj-card">
+      <div class="proj-top">
+        <h3 class="proj-name">Home Lab Infrastructure</h3>
+        <span class="proj-tag">Self-hosted</span>
       </div>
-      <p class="project-desc">30+ container home lab running local LLMs (Ollama) and AI agent frameworks (Mastra) behind zero-trust architecture: Authelia SSO, Traefik reverse proxy, Cloudflare Tunnel, CrowdSec IPS.</p>
-      <span class="project-stack">Docker &middot; Ollama &middot; Mastra &middot; Traefik &middot; Cloudflare &middot; CrowdSec</span>
-    </div>
+      <p class="proj-desc"><strong>30+ containers</strong> running local LLMs and AI agent frameworks behind zero-trust architecture with SSO, reverse proxy, and intrusion prevention.</p>
+      <span class="proj-tech">Docker · Ollama · Mastra · Traefik · Cloudflare · CrowdSec</span>
+    </article>
 
   </div>
 </section>
 
 <style>
-  .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  .section-marker {
+    width: 12px;
+    height: 12px;
+    background: var(--color-text);
+    opacity: 0.12;
+    margin-bottom: 1.5rem;
   }
 
-  .project-card {
+  .section-head {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.5rem;
+  }
+
+  .proj-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .proj-card {
     padding: 1.5rem;
-    background: var(--color-bg-elevated);
-    border-radius: 8px;
-    filter: saturate(0%);
-    transition: filter 0.5s ease;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
   }
 
-  .project-card:hover {
-    filter: saturate(100%);
-  }
-
-  .project-header {
+  .proj-top {
     display: flex;
     align-items: baseline;
-    gap: 0.6rem;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
     flex-wrap: wrap;
-    margin-bottom: 0.6rem;
   }
 
-  .project-name {
-    font-size: 1.0625rem;
+  .proj-name {
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: -0.01em;
   }
 
-  .project-badge {
+  .proj-tag {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.6875rem;
-    color: var(--color-text-tertiary);
-    padding: 0.15rem 0.5rem;
-    background: var(--color-bg);
-    border-radius: 3px;
+    font-size: 0.65rem;
+    color: var(--color-text-muted);
+    padding: 0.1rem 0.4rem;
     border: 1px solid var(--color-border);
+    border-radius: 3px;
   }
 
-  .project-desc {
-    font-size: 0.9375rem;
-    line-height: 1.65;
+  .proj-desc {
+    font-size: 0.875rem;
+    line-height: 1.6;
     color: var(--color-text-secondary);
     margin-bottom: 0.75rem;
   }
 
-  .project-stack {
+  .proj-desc strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .proj-tech {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--color-text-tertiary);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .proj-list {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

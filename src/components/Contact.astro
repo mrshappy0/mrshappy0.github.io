@@ -2,45 +2,57 @@
 ---
 
 <section id="contact" class="section">
-  <p class="section-label">Contact</p>
-  <h2 class="section-heading">Let's work together.</h2>
-  <p class="contact-blurb">
-    Open to new opportunities and conversations. Whether AI agents,
-    developer tooling, or just to say hi &mdash; reach out.
-  </p>
-  <div class="contact-links">
-    <a href="mailto:atom@shaplabs.net" class="contact-email cmyk-border">
-      atom@shaplabs.net
-    </a>
-    <div class="contact-secondary">
+  <div class="section-marker"></div>
+  <h2 class="section-head">Contact</h2>
+  <p class="contact-blurb">Open to new opportunities and conversations. Reach out.</p>
+
+  <div class="contact-block">
+    <a href="mailto:atom@shaplabs.net" class="contact-email">atom@shaplabs.net</a>
+    <div class="contact-links">
       <a href="https://github.com/mrshappy0" target="_blank" rel="noopener">GitHub</a>
-      <span class="sep">&middot;</span>
+      <span>&middot;</span>
       <a href="https://linkedin.com/in/adam-shappy" target="_blank" rel="noopener">LinkedIn</a>
-      <span class="sep">&middot;</span>
+      <span>&middot;</span>
       <a href="https://medium.com/@adam_shappy" target="_blank" rel="noopener">Medium</a>
-      <span class="sep">&middot;</span>
+      <span>&middot;</span>
       <a href="/Cresta_Adam_Shappy_Resume.pdf" target="_blank">Resume</a>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
-  <p>Built with Astro &middot; Deployed on GitHub Pages</p>
+<footer class="footer">
+  <div class="footer-grid">
+    <img src="/adam-mono-text.png" alt="" width="40" height="41" class="footer-mono" />
+    <span class="footer-text">Built with Astro · GitHub Pages</span>
+  </div>
 </footer>
 
 <style>
+  .section-marker {
+    width: 12px;
+    height: 12px;
+    background: var(--color-text);
+    opacity: 0.12;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-head {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
   .contact-blurb {
     font-size: 1rem;
-    line-height: 1.7;
     color: var(--color-text-secondary);
-    max-width: 500px;
     margin-bottom: 2rem;
   }
 
-  .contact-links {
+  .contact-block {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .contact-email {
@@ -48,47 +60,57 @@
     font-size: 1.125rem;
     color: var(--color-text);
     text-decoration: none;
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    background: var(--color-bg-elevated);
-    border-radius: 8px;
-    filter: saturate(0%);
-    transition: filter 0.5s ease;
     align-self: flex-start;
+    padding: 0.6rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
 
   .contact-email:hover {
-    filter: saturate(100%);
+    border-color: var(--color-text-muted);
+    box-shadow: 0 0 0 3px var(--color-grid);
   }
 
-  .contact-secondary {
+  .contact-links {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.5rem;
-    font-size: 0.9375rem;
-    color: var(--color-text-tertiary);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    flex-wrap: wrap;
   }
 
-  .contact-secondary a {
+  .contact-links a {
     color: var(--color-text-secondary);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
   }
 
-  .contact-secondary a:hover {
+  .contact-links a:hover {
     color: var(--color-text);
   }
 
-  .sep {
-    opacity: 0.4;
+  .footer {
+    padding: 3rem 2rem;
   }
 
-  .site-footer {
-    padding: 2rem;
-    text-align: center;
-    font-size: 0.8125rem;
-    color: var(--color-text-tertiary);
-    border-top: 1px solid var(--color-border);
+  .footer-grid {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-mono {
+    opacity: 0.25;
+    display: block;
+  }
+
+  .footer-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
   }
 </style>
