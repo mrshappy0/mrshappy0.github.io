@@ -3,7 +3,20 @@
 
 <header class="site-header">
   <a href="/" class="logo" aria-label="Adam Shappy, Home">
-    <span class="logo-bracket">{'{'}</span>AS<span class="logo-bracket">{'}'}</span>
+    <img
+      class="logo-desktop"
+      src="/adam-mono-text.png"
+      alt="Adam Shappy"
+      width="100"
+      height="104"
+    />
+    <img
+      class="logo-mobile"
+      src="/adam-monogram-mobile.png"
+      alt="AS"
+      width="50"
+      height="52"
+    />
   </a>
 </header>
 
@@ -14,35 +27,42 @@
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    transition: background 0.3s ease;
   }
 
-  .logo {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--color-text);
-    text-decoration: none;
-    letter-spacing: 0.05em;
+  .logo img {
+    display: block;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
   }
 
-  .logo-bracket {
-    color: var(--color-accent);
-    opacity: 0.6;
-  }
-
-  .logo:hover .logo-bracket {
+  .logo:hover img {
     opacity: 1;
+  }
+
+  .logo-desktop {
+    display: block;
+  }
+
+  .logo-mobile {
+    display: none;
   }
 
   @media (max-width: 640px) {
     .site-header {
       padding: 1rem 1.25rem;
+    }
+
+    .logo-desktop {
+      display: none;
+    }
+
+    .logo-mobile {
+      display: block;
     }
   }
 </style>

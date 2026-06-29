@@ -7,26 +7,22 @@
 
   <div class="project-list">
 
-    <div class="project-card">
+    <div class="project-card cmyk-border-subtle">
       <div class="project-header">
         <h3 class="project-name">Mini Mealie</h3>
-        <span class="project-platform">Chrome &amp; Firefox Extension</span>
+        <span class="project-badge">Chrome &amp; Firefox</span>
       </div>
-      <p class="project-desc">Open-source browser extension with 2,000+ active users and growing international adoption. Developed using AI-assisted workflows with custom MCP tools. Collaborated with external contributors to add cross-browser Firefox support.</p>
-      <div class="project-links">
-        <span class="project-stack">TypeScript, MCP</span>
-      </div>
+      <p class="project-desc">Open-source browser extension with 2,000+ active users and growing international adoption. Built with AI-assisted workflows and custom MCP tools. Cross-browser Firefox support added via community collaboration.</p>
+      <span class="project-stack">TypeScript &middot; MCP</span>
     </div>
 
-    <div class="project-card">
+    <div class="project-card cmyk-border-subtle">
       <div class="project-header">
         <h3 class="project-name">Self-Hosted Infrastructure</h3>
-        <span class="project-platform">Home Lab</span>
+        <span class="project-badge">Home Lab</span>
       </div>
-      <p class="project-desc">Designed and maintain a 30+ container home lab running local LLMs (Ollama) and AI agent frameworks (Mastra) behind a zero-trust architecture with Authelia SSO, Traefik reverse proxy, Cloudflare Tunnel, and CrowdSec intrusion prevention.</p>
-      <div class="project-links">
-        <span class="project-stack">Docker, Ollama, Mastra, Traefik, Cloudflare, CrowdSec</span>
-      </div>
+      <p class="project-desc">30+ container home lab running local LLMs (Ollama) and AI agent frameworks (Mastra) behind zero-trust architecture: Authelia SSO, Traefik reverse proxy, Cloudflare Tunnel, CrowdSec IPS.</p>
+      <span class="project-stack">Docker &middot; Ollama &middot; Mastra &middot; Traefik &middot; Cloudflare &middot; CrowdSec</span>
     </div>
 
   </div>
@@ -36,56 +32,50 @@
   .project-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .project-card {
-    padding: 1.75rem;
+    padding: 1.5rem;
     background: var(--color-bg-elevated);
     border-radius: 8px;
-    border: 1px solid var(--color-border-subtle);
-    transition: border-color 0.2s ease;
+    filter: saturate(0%);
+    transition: filter 0.5s ease;
   }
 
   .project-card:hover {
-    border-color: var(--color-border);
+    filter: saturate(100%);
   }
 
   .project-header {
     display: flex;
     align-items: baseline;
-    gap: 0.75rem;
+    gap: 0.6rem;
     flex-wrap: wrap;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
   }
 
   .project-name {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
 
-  .project-platform {
+  .project-badge {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--color-accent);
+    font-size: 0.6875rem;
+    color: var(--color-text-tertiary);
     padding: 0.15rem 0.5rem;
-    background: var(--color-accent-dim);
+    background: var(--color-bg);
     border-radius: 3px;
+    border: 1px solid var(--color-border);
   }
 
   .project-desc {
     font-size: 0.9375rem;
     line-height: 1.65;
     color: var(--color-text-secondary);
-    margin-bottom: 1rem;
-  }
-
-  .project-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
   }
 
   .project-stack {

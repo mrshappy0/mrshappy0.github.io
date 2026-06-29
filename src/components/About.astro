@@ -6,17 +6,16 @@
   <h2 class="section-heading">I build where AI meets engineering.</h2>
   <div class="about-text">
     <p>
-      I'm a Senior Software Engineer with 6 years of experience across cloud-native
-      platforms, developer tooling, and AI agent systems. Currently at Cox Automotive,
-      I built a conversational AI agent that lets dealership salespeople query and act
-      on CRM data through natural language, and developed MCP tooling adopted across
-      hundreds of engineering teams.
+      Senior Software Engineer with 6 years across cloud-native platforms,
+      developer tooling, and AI agent systems. Currently at Cox Automotive,
+      I built conversational AI agents enabling natural language CRM interactions
+      and developed MCP tooling adopted across hundreds of engineering teams.
     </p>
     <p>
-      I bridge AI capabilities with real business impact — combining full-stack
-      engineering depth with customer-facing deployment. Outside of work, I designed
-      and maintain a 30+ container home lab running local LLMs, AI agent frameworks,
-      and a zero-trust architecture.
+      I combine full-stack engineering depth with customer-facing deployment
+      to bridge AI capabilities and real business impact. Outside of work I
+      run a 30+ container home lab &mdash; local LLMs, agent frameworks, zero-trust
+      architecture.
     </p>
   </div>
   <div class="tech-tags">
@@ -45,16 +44,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: var(--color-text-secondary);
-    max-width: 680px;
+    max-width: 620px;
     margin-bottom: 2.5rem;
-  }
-
-  .about-text p strong {
-    color: var(--color-text);
-    font-weight: 600;
   }
 
   .tech-tags {
@@ -66,10 +60,16 @@
   .tag {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.65rem;
     border-radius: 4px;
-    background: var(--color-accent-dim);
-    color: var(--color-accent);
-    border: 1px solid rgba(240, 136, 62, 0.15);
+    background: var(--color-bg-elevated);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    filter: saturate(0%);
+    transition: filter 0.4s ease;
+  }
+
+  .tag:hover {
+    filter: saturate(100%);
   }
 </style>

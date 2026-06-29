@@ -14,20 +14,20 @@
         <span class="role-dates">2021 &mdash; Present</span>
       </div>
       <div class="role-highlights">
-        <div class="highlight">
+        <div class="highlight cmyk-border-subtle">
           <h4 class="highlight-name">AI Agent for Enterprise CRM</h4>
-          <p class="highlight-desc">Built conversational AI agent enabling natural language CRM queries and actions on one of the automotive industry's largest datasets. Implemented function calling via AWS Strands Agents for autonomous operation selection.</p>
-          <span class="highlight-stack">Python, AWS Strands Agents</span>
+          <p class="highlight-desc">Conversational AI agent enabling natural language CRM queries and actions on one of the automotive industry's largest datasets. Function calling via AWS Strands Agents for autonomous operation selection.</p>
+          <span class="highlight-stack">Python &middot; AWS Strands Agents</span>
         </div>
-        <div class="highlight">
-          <h4 class="highlight-name">MCP Developer Platform &amp; AI Tooling</h4>
-          <p class="highlight-desc">Built MCP tools enabling AI coding assistants to interact with Rally enterprise project management, adopted across hundreds of internal engineering teams.</p>
-          <span class="highlight-stack">TypeScript, Bun, Node.js, Zod</span>
+        <div class="highlight cmyk-border-subtle">
+          <h4 class="highlight-name">MCP Developer Platform</h4>
+          <p class="highlight-desc">MCP tools enabling AI coding assistants to interact with Rally project management, adopted across hundreds of internal engineering teams.</p>
+          <span class="highlight-stack">TypeScript &middot; Bun &middot; Node.js &middot; Zod</span>
         </div>
-        <div class="highlight">
+        <div class="highlight cmyk-border-subtle">
           <h4 class="highlight-name">Direct Mail Automation Platform</h4>
-          <p class="highlight-desc">Led end-to-end development of direct mail API and React dashboard, integrating third-party Lob API. Resolved critical race condition blocking production release.</p>
-          <span class="highlight-stack">TypeScript, AWS CDK, React, Next.js</span>
+          <p class="highlight-desc">Led end-to-end development of direct mail API and React dashboard. Built CI/CD from scratch, integrated Lob API, resolved critical race condition blocking production release.</p>
+          <span class="highlight-stack">TypeScript &middot; AWS CDK &middot; React &middot; Next.js</span>
         </div>
       </div>
     </div>
@@ -39,9 +39,9 @@
         <span class="role-dates">2020 &mdash; 2021</span>
       </div>
       <div class="role-highlights">
-        <div class="highlight">
+        <div class="highlight cmyk-border-subtle">
           <h4 class="highlight-name">Mobile App Platform</h4>
-          <p class="highlight-desc">Maintained mobile app generator and CMS-driven theming engine producing branded iOS and Android apps for major ski resorts. Managed client onboarding and App Store release cycles.</p>
+          <p class="highlight-desc">Maintained app generator and CMS-driven theming engine producing branded iOS and Android apps for major ski resorts. Managed client onboarding and App Store release cycles.</p>
           <span class="highlight-stack">React Native</span>
         </div>
       </div>
@@ -54,31 +54,31 @@
   .timeline {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .role {
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
     border-left: 1px solid var(--color-border);
   }
 
   .role-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .role-title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
     letter-spacing: -0.01em;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.15rem;
   }
 
   .role-company {
     display: block;
     font-size: 0.9375rem;
-    color: var(--color-accent);
-    margin-bottom: 0.15rem;
+    color: var(--cmyk-magenta);
+    margin-bottom: 0.1rem;
   }
 
   .role-dates {
@@ -90,27 +90,32 @@
   .role-highlights {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .highlight {
     padding: 1.25rem;
     background: var(--color-bg-elevated);
     border-radius: 8px;
-    border: 1px solid var(--color-border-subtle);
+    filter: saturate(0%);
+    transition: filter 0.5s ease;
+  }
+
+  .highlight:hover {
+    filter: saturate(100%);
   }
 
   .highlight-name {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-weight: 600;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.35rem;
   }
 
   .highlight-desc {
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     line-height: 1.6;
     color: var(--color-text-secondary);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
   }
 
   .highlight-stack {

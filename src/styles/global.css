@@ -1,13 +1,14 @@
 :root {
-  --color-bg: #0d1117;
-  --color-bg-elevated: #161b22;
-  --color-text: #e6edf3;
-  --color-text-secondary: #8b949e;
-  --color-text-tertiary: #6e7681;
-  --color-accent: #f0883e;
-  --color-accent-dim: rgba(240, 136, 62, 0.12);
-  --color-border: #30363d;
-  --color-border-subtle: rgba(48, 54, 61, 0.6);
+  --color-bg: #fafaf8;
+  --color-bg-elevated: #ffffff;
+  --color-text: #18181b;
+  --color-text-secondary: #52525b;
+  --color-text-tertiary: #a1a1aa;
+  --color-border: #e4e4e7;
+  --cmyk-red: #ff3b30;
+  --cmyk-magenta: #d118ff;
+  --cmyk-yellow: #fffb00;
+  --cmyk-blue: #0f27ff;
 }
 
 *,
@@ -33,31 +34,47 @@ body {
 }
 
 ::selection {
-  background: var(--color-accent);
-  color: var(--color-bg);
+  background: var(--cmyk-magenta);
+  color: #fff;
 }
 
 .section {
   padding: 6rem 2rem;
-  max-width: 960px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
 .section-label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.75rem;
-  color: var(--color-accent);
+  color: var(--color-text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  margin-bottom: 1rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
 }
 
 .section-heading {
   font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.2;
+}
+
+.cmyk-border {
+  border: 2px solid;
+  border-top-color: var(--cmyk-red);
+  border-left-color: var(--cmyk-magenta);
+  border-right-color: var(--cmyk-yellow);
+  border-bottom-color: var(--cmyk-blue);
+}
+
+.cmyk-border-subtle {
+  border: 1px solid;
+  border-top-color: rgba(255, 59, 48, 0.3);
+  border-left-color: rgba(209, 24, 255, 0.3);
+  border-right-color: rgba(255, 251, 0, 0.3);
+  border-bottom-color: rgba(15, 39, 255, 0.3);
 }
 
 @media (max-width: 640px) {

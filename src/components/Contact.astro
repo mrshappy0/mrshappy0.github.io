@@ -5,11 +5,11 @@
   <p class="section-label">Contact</p>
   <h2 class="section-heading">Let's work together.</h2>
   <p class="contact-blurb">
-    I'm open to new opportunities and conversations. Whether it's about AI agents,
-    developer tooling, or just to say hi — reach out.
+    Open to new opportunities and conversations. Whether AI agents,
+    developer tooling, or just to say hi &mdash; reach out.
   </p>
   <div class="contact-links">
-    <a href="mailto:atom@shaplabs.net" class="contact-primary">
+    <a href="mailto:atom@shaplabs.net" class="contact-email cmyk-border">
       atom@shaplabs.net
     </a>
     <div class="contact-secondary">
@@ -25,15 +25,15 @@
 </section>
 
 <footer class="site-footer">
-  <p>Built with Astro. Deployed on GitHub Pages.</p>
+  <p>Built with Astro &middot; Deployed on GitHub Pages</p>
 </footer>
 
 <style>
   .contact-blurb {
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: var(--color-text-secondary);
-    max-width: 560px;
+    max-width: 500px;
     margin-bottom: 2rem;
   }
 
@@ -43,16 +43,22 @@
     gap: 1.25rem;
   }
 
-  .contact-primary {
+  .contact-email {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.25rem;
-    color: var(--color-accent);
+    font-size: 1.125rem;
+    color: var(--color-text);
     text-decoration: none;
-    transition: filter 0.2s ease;
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    background: var(--color-bg-elevated);
+    border-radius: 8px;
+    filter: saturate(0%);
+    transition: filter 0.5s ease;
+    align-self: flex-start;
   }
 
-  .contact-primary:hover {
-    filter: brightness(1.15);
+  .contact-email:hover {
+    filter: saturate(100%);
   }
 
   .contact-secondary {
@@ -66,6 +72,7 @@
   .contact-secondary a {
     color: var(--color-text-secondary);
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s ease;
   }
 
@@ -82,6 +89,6 @@
     text-align: center;
     font-size: 0.8125rem;
     color: var(--color-text-tertiary);
-    border-top: 1px solid var(--color-border-subtle);
+    border-top: 1px solid var(--color-border);
   }
 </style>
