@@ -12,7 +12,7 @@
     <p class="hero-line">Fullstack by trade, reimagining the space between people and software.</p>
     <div class="hero-cta-row">
       <a href="#contact" class="hero-cta">Get in touch</a>
-      <a href="/Cresta_Adam_Shappy_Resume.pdf" class="hero-cta-secondary" target="_blank">Resume</a>
+      <a href="/Adam_Shappy_Resume.pdf" class="hero-cta-secondary" target="_blank">Resume</a>
     </div>
   </div>
   <div class="hero-glitch hero-glitch-1"></div>
@@ -38,6 +38,7 @@
       linear-gradient(var(--color-grid) 1px, transparent 1px),
       linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
     background-size: 20px 20px;
+    pointer-events: none;
   }
 
   .hero-monogram {
@@ -114,15 +115,19 @@
   }
 
   .hero-cta-secondary {
+    display: inline-flex;
+    padding: 0.6rem 1.4rem;
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--color-text-secondary);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s, background 0.2s;
   }
 
   .hero-cta-secondary:hover {
     color: var(--color-text);
+    background: var(--color-grid);
+    border-radius: 6px;
   }
 
   .hero-glitch {
@@ -130,6 +135,7 @@
     height: 1px;
     left: 0;
     right: 0;
+    pointer-events: none;
   }
 
   .hero-glitch-1 {
