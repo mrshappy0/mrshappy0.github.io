@@ -1,0 +1,31 @@
+---
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Adam Shappy — Senior Software Engineer building AI agents, developer tooling, and cloud-native platforms." />
+    <meta property="og:title" content="Adam Shappy" />
+    <meta property="og:description" content="Senior Software Engineer — AI agents, developer tooling, cloud-native platforms." />
+    <meta property="og:url" content="https://adam-shappy.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Adam Shappy" />
+    <meta name="twitter:description" content="Senior Software Engineer — AI agents, developer tooling, cloud-native platforms." />
+    <link rel="icon" href="/favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Adam Shappy</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

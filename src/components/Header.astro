@@ -1,0 +1,48 @@
+---
+---
+
+<header class="site-header">
+  <a href="/" class="logo" aria-label="Adam Shappy, Home">
+    <span class="logo-bracket">{</span>AS<span class="logo-bracket">}</span>
+  </a>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: background 0.3s ease;
+  }
+
+  .logo {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-bracket {
+    color: var(--color-accent);
+    opacity: 0.6;
+  }
+
+  .logo:hover .logo-bracket {
+    opacity: 1;
+  }
+
+  @media (max-width: 640px) {
+    .site-header {
+      padding: 1rem 1.25rem;
+    }
+  }
+</style>

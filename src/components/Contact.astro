@@ -1,0 +1,87 @@
+---
+---
+
+<section id="contact" class="section">
+  <p class="section-label">Contact</p>
+  <h2 class="section-heading">Let's work together.</h2>
+  <p class="contact-blurb">
+    I'm open to new opportunities and conversations. Whether it's about AI agents,
+    developer tooling, or just to say hi — reach out.
+  </p>
+  <div class="contact-links">
+    <a href="mailto:atom@shaplabs.net" class="contact-primary">
+      atom@shaplabs.net
+    </a>
+    <div class="contact-secondary">
+      <a href="https://github.com/mrshappy0" target="_blank" rel="noopener">GitHub</a>
+      <span class="sep">&middot;</span>
+      <a href="https://linkedin.com/in/adam-shappy" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">&middot;</span>
+      <a href="https://medium.com/@adam_shappy" target="_blank" rel="noopener">Medium</a>
+      <span class="sep">&middot;</span>
+      <a href="/Cresta_Adam_Shappy_Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Built with Astro. Deployed on GitHub Pages.</p>
+</footer>
+
+<style>
+  .contact-blurb {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    max-width: 560px;
+    margin-bottom: 2rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-primary {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: filter 0.2s ease;
+  }
+
+  .contact-primary:hover {
+    filter: brightness(1.15);
+  }
+
+  .contact-secondary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-tertiary);
+  }
+
+  .contact-secondary a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .contact-secondary a:hover {
+    color: var(--color-text);
+  }
+
+  .sep {
+    opacity: 0.4;
+  }
+
+  .site-footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+</style>

@@ -1,0 +1,17 @@
+{
+  "name": "adam-shappy-portfolio",
+  "type": "module",
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.7.0",
+    "typescript": "^5.7.0"
+  }
+}

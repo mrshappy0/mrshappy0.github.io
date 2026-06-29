@@ -1,0 +1,96 @@
+---
+---
+
+<section id="projects" class="section">
+  <p class="section-label">Projects</p>
+  <h2 class="section-heading">What I've built.</h2>
+
+  <div class="project-list">
+
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-name">Mini Mealie</h3>
+        <span class="project-platform">Chrome &amp; Firefox Extension</span>
+      </div>
+      <p class="project-desc">Open-source browser extension with 2,000+ active users and growing international adoption. Developed using AI-assisted workflows with custom MCP tools. Collaborated with external contributors to add cross-browser Firefox support.</p>
+      <div class="project-links">
+        <span class="project-stack">TypeScript, MCP</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h3 class="project-name">Self-Hosted Infrastructure</h3>
+        <span class="project-platform">Home Lab</span>
+      </div>
+      <p class="project-desc">Designed and maintain a 30+ container home lab running local LLMs (Ollama) and AI agent frameworks (Mastra) behind a zero-trust architecture with Authelia SSO, Traefik reverse proxy, Cloudflare Tunnel, and CrowdSec intrusion prevention.</p>
+      <div class="project-links">
+        <span class="project-stack">Docker, Ollama, Mastra, Traefik, Cloudflare, CrowdSec</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.75rem;
+    background: var(--color-bg-elevated);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-subtle);
+    transition: border-color 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: var(--color-border);
+  }
+
+  .project-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .project-platform {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    padding: 0.15rem 0.5rem;
+    background: var(--color-accent-dim);
+    border-radius: 3px;
+  }
+
+  .project-desc {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .project-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .project-stack {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+  }
+</style>

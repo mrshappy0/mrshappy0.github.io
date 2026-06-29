@@ -1,0 +1,121 @@
+---
+---
+
+<section id="experience" class="section">
+  <p class="section-label">Experience</p>
+  <h2 class="section-heading">Where I've worked.</h2>
+
+  <div class="timeline">
+
+    <div class="role">
+      <div class="role-header">
+        <h3 class="role-title">Senior Software Engineer</h3>
+        <span class="role-company">Cox Automotive</span>
+        <span class="role-dates">2021 &mdash; Present</span>
+      </div>
+      <div class="role-highlights">
+        <div class="highlight">
+          <h4 class="highlight-name">AI Agent for Enterprise CRM</h4>
+          <p class="highlight-desc">Built conversational AI agent enabling natural language CRM queries and actions on one of the automotive industry's largest datasets. Implemented function calling via AWS Strands Agents for autonomous operation selection.</p>
+          <span class="highlight-stack">Python, AWS Strands Agents</span>
+        </div>
+        <div class="highlight">
+          <h4 class="highlight-name">MCP Developer Platform &amp; AI Tooling</h4>
+          <p class="highlight-desc">Built MCP tools enabling AI coding assistants to interact with Rally enterprise project management, adopted across hundreds of internal engineering teams.</p>
+          <span class="highlight-stack">TypeScript, Bun, Node.js, Zod</span>
+        </div>
+        <div class="highlight">
+          <h4 class="highlight-name">Direct Mail Automation Platform</h4>
+          <p class="highlight-desc">Led end-to-end development of direct mail API and React dashboard, integrating third-party Lob API. Resolved critical race condition blocking production release.</p>
+          <span class="highlight-stack">TypeScript, AWS CDK, React, Next.js</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <h3 class="role-title">React Native Developer</h3>
+        <span class="role-company">Alpine Media Technology</span>
+        <span class="role-dates">2020 &mdash; 2021</span>
+      </div>
+      <div class="role-highlights">
+        <div class="highlight">
+          <h4 class="highlight-name">Mobile App Platform</h4>
+          <p class="highlight-desc">Maintained mobile app generator and CMS-driven theming engine producing branded iOS and Android apps for major ski resorts. Managed client onboarding and App Store release cycles.</p>
+          <span class="highlight-stack">React Native</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .role {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--color-border);
+  }
+
+  .role-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .role-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.25rem;
+  }
+
+  .role-company {
+    display: block;
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+    margin-bottom: 0.15rem;
+  }
+
+  .role-dates {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    color: var(--color-text-tertiary);
+  }
+
+  .role-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .highlight {
+    padding: 1.25rem;
+    background: var(--color-bg-elevated);
+    border-radius: 8px;
+    border: 1px solid var(--color-border-subtle);
+  }
+
+  .highlight-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .highlight-desc {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.6rem;
+  }
+
+  .highlight-stack {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+  }
+</style>
