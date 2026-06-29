@@ -42,10 +42,30 @@ body {
   padding: 7rem 2rem;
   max-width: 780px;
   margin: 0 auto;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.section:first-of-type::before {
+  display: none;
 }
 
 @media (max-width: 640px) {
   .section {
     padding: 4rem 1.25rem;
+  }
+
+  .section::before {
+    left: 1.25rem;
+    right: 1.25rem;
   }
 }
