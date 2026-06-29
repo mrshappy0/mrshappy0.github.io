@@ -10,6 +10,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "overrides": {
+    "yaml": "^2.9.0"
+  },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "astro": "^7.0.3",
