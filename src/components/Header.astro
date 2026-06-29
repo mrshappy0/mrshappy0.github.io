@@ -1,0 +1,74 @@
+---
+---
+
+<header class="site-header">
+  <a href="/" class="monogram-link" aria-label="Adam Shappy">
+    <img src="/adam-mono-text.png" alt="AS monogram" width="60" height="62" />
+  </a>
+  <nav class="header-nav">
+    <a href="#about">about</a>
+    <a href="#work">work</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(245, 244, 240, 0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  .monogram-link img {
+    display: block;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+
+  .monogram-link:hover img {
+    opacity: 1;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .header-nav a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.725rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.2s;
+  }
+
+  .header-nav a:hover {
+    color: var(--color-text);
+  }
+
+  @media (max-width: 640px) {
+    .site-header {
+      padding: 0.85rem 1.25rem;
+    }
+
+    .header-nav {
+      gap: 1rem;
+    }
+
+    .monogram-link img {
+      width: 40px;
+      height: 41px;
+    }
+  }
+</style>

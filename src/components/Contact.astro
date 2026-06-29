@@ -1,0 +1,107 @@
+---
+---
+
+<section id="contact" class="section">
+  <h2 class="section-head">Contact</h2>
+  <p class="contact-blurb">Open to new opportunities and conversations. Reach out.</p>
+
+  <div class="contact-block">
+    <a href="mailto:atom@shaplabs.net" class="contact-email">atom@shaplabs.net</a>
+    <div class="contact-links">
+      <a href="https://github.com/mrshappy0" target="_blank" rel="noopener">GitHub</a>
+      <span>&middot;</span>
+      <a href="https://linkedin.com/in/adam-shappy" target="_blank" rel="noopener">LinkedIn</a>
+      <span>&middot;</span>
+      <a href="https://medium.com/@adam_shappy" target="_blank" rel="noopener">Medium</a>
+      <span>&middot;</span>
+      <a href="/Adam_Shappy_Resume.pdf" target="_blank">Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <img src="/adam-mono-text.png" alt="" width="40" height="41" class="footer-mono" />
+    <span class="footer-text">Built with Astro · GitHub Pages</span>
+  </div>
+</footer>
+
+<style>
+  .section-head {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .contact-blurb {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .contact-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-email {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    text-decoration: none;
+    align-self: flex-start;
+    padding: 0.6rem 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .contact-email:hover {
+    border-color: var(--color-text-muted);
+    box-shadow: 0 0 0 3px var(--color-grid);
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    flex-wrap: wrap;
+  }
+
+  .contact-links a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-links a:hover {
+    color: var(--color-text);
+  }
+
+  .footer {
+    padding: 3rem 2rem;
+  }
+
+  .footer-grid {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-mono {
+    opacity: 0.25;
+    display: block;
+  }
+
+  .footer-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6875rem;
+    color: var(--color-text-muted);
+  }
+</style>
