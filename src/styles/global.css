@@ -45,7 +45,7 @@ body {
   position: relative;
 }
 
-.section::before {
+.section + .section::before {
   content: '';
   position: absolute;
   top: 0;
@@ -53,10 +53,6 @@ body {
   right: 2rem;
   height: 1px;
   background: var(--color-border);
-}
-
-.section:first-of-type::before {
-  display: none;
 }
 
 @media (max-width: 640px) {
